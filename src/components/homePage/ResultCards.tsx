@@ -1,4 +1,3 @@
-import { desc, sub } from 'framer-motion/client'
 import Image from 'next/image';
 import React from 'react'
 import resultCardBg from '../../../public/resultCardBg.jpeg'

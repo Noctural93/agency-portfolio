@@ -31,7 +31,7 @@ export default function SlideShow({
       watchSlidesProgress
       onSetTranslate={(swiper: SwiperCore) => {
         swiper.slides.forEach((slideEl) => {
-          // @ts-ignore: Swiper adds progress to slide elements
+          // @ts-expect-error: Swiper adds progress to slide elements
           const progress = slideEl.progress ?? 0;
 
           // Smoother scale damping

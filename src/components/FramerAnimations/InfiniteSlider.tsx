@@ -66,7 +66,7 @@ const InfiniteSlider = ({ children, duration, containerClassName, itemGap }: Pro
         </Fragment>
       ));
     },
-    [children]
+    [children, itemGap]
   );
 
   const scroll: TargetAndTransition = {

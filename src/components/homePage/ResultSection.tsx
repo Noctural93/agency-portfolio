@@ -69,7 +69,7 @@ const ResultSection = () => {
             itemGap="mx-3"
             containerClassName="p-[10px]"
           >
-            {ResultCardsData.map((item, index) => (
+            {ResultCardsData.map((item) => (
               <ResultCards
                 key={item.title}
                 title={item.title}
@@ -82,7 +82,7 @@ const ResultSection = () => {
           </InfiniteSlider>
         ) : (
           <SlideShow>
-            {ResultCardsData.map((item, index) => (
+            {ResultCardsData.map((item) => (
               <ResultCards
                 key={item.title}
                 title={item.title}
