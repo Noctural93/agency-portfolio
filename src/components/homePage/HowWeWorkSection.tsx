@@ -3,11 +3,37 @@ import AnimatedText from "../FramerAnimations/AnimatedText";
 import SectionIndicator from "../SectionIndicator";
 import Image from "next/image";
 import HomePageAboutSection from "../../../public/HomePageaboutSection.jpeg";
+import InfoCards from "./InfoCards";
+
+const InfoCardsData = [
+  {
+    title: "Kickoff",
+    description:
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut consequuntur explicabo omnis, obcaecati quos fugiat ipsum esse cumque quibusdam labore possimus aperiam dignissimos harum quia doloremque neque, quis totam. Sequi.",
+    features: ["Comprehensive Consultation", "Project Roadmap"],
+    step: "Stage 1",
+  },
+  {
+    title: "Execution",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut consequuntur explicabo omnis, obcaecati quos fugiat ipsum esse cumque quibusdam labore possimus aperiam dignissimos harum quia doloremque neque, quis totam. Sequi.",
+    features: ["Seamless Integration", "Real Time Collaboration"],
+    step: "Stage 2",
+  },
+  {
+    title: "Handoff",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut consequuntur explicabo omnis, obcaecati quos fugiat ipsum esse cumque quibusdam labore possimus aperiam dignissimos harum quia doloremque neque, quis totam. Sequi.",
+    features: ["Ongoing Support", "Documentation"],
+    step: "Stage 3",
+    cta: "Book an Appointment",
+  },
+];
 
 const HowWeWorkSection = () => {
   return (
-    <section className="relative flex flex-col justify-center pt-[40px] w-full overflow-hidden gap-[70px] md:gap-[100px]">
-      <div className="flex flex-col lg:flex-row w-full max-w-[1440px] gap-[70px] md:gap-[84px] px-[30px] lg:px-[50px] 2xl:px-[70px]">
+    <section className="relative flex flex-col items-center justify-center pt-[40px] w-full gap-[70px] md:gap-[100px] lg:overflow-visible lg:items-center lg:justify-start">
+      <div className="relative flex flex-col lg:flex-row lg:flex-nowrap h-min w-full max-w-[1440px] gap-[70px] md:gap-[84px] px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[120px] lg:overflow-visible lg:items-start lg:justify-center">
         <div className="flex flex-col flex-nowrap gap-[50px] h-min w-full">
           <div className="h-min flex grow lg:max-w-[600px] w-full gap-[30px] items-start justify-center flex-col flex-nowrap">
             <div className="flex justify-start items-start flex-col gap-[30px] w-full h-min">
@@ -30,11 +56,21 @@ const HowWeWorkSection = () => {
           </div>
 
           {/* cards */}
-          <div className="h-[1000px] w-full"></div>
+          <div className="h-min w-full flex flex-col items-center justify-center gap-[24px]">
+            {
+              InfoCardsData.map((card, index) => (
+                <InfoCards 
+                  key={index}
+                  card={card}
+                />
+              ))
+            }
+          </div>
         </div>
 
         {/* Image */}
-        <div className="h-[340px] md:h-auto grow lg:max-w-[528px] w-full">
+        <div className="contents">
+          <div className="lg:sticky lg:top-[100px] z-[1] lg:max-w-[528px] w-full self-start">
           <div className="relative gap-[10px] flex items-center justify-center h-full md:h-[534px] max-w-full w-full p-0 z-2">
             <div className="relative h-full w-full p-[10px] rounded-[30px] border border-solid backdrop-blur-[2px] border-[#ffffff0d] bg-[#080808] overflow-hidden z-2">
               <div className="w-full h-full z-2 border-[#ffffff1a] border border-solid rounded-[30px]">
@@ -50,10 +86,11 @@ const HowWeWorkSection = () => {
             <div className="absolute bottom-[8px] left-1/2 -translate-x-1/2 bg-[#0055ff] blur-[40px] rounded-[100%] w-[285px] h-[53px] z-1 pointer-events-none" />
           </div>
         </div>
+        </div>
       </div>
 
       {/* line */}
-      <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_0%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0.02)_100%)] h-[1px] w-full m-w-[1300px]" />
+      <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.25)_50%,rgba(255,255,255,0.08)_100%)] h-[1px] w-[85%] self-center m-w-[1300px]" />
     </section>
   );
 };

@@ -26,6 +26,16 @@ const HowWeWorkSection = dynamic(() => import('@/components/homePage/HowWeWorkSe
   loading: () => <div className="h-[100vh] w-full" />
 })
 
+const FeatureSection = dynamic(() => import('@/components/homePage/FeatureSection'), {
+  ssr: false,
+  loading: () => <div className="h-[100vh] w-full" />
+})
+
+const BenefitSection = dynamic(() => import('@/components/homePage/BenefitSection'), {
+  ssr: false,
+  loading: () => <div className="h-[100vh] w-full" />
+})
+
 const Home = () => {
   return (
     <>
@@ -34,6 +44,8 @@ const Home = () => {
       <AboutAgencySection/>
       <ResultSection/>
       <HowWeWorkSection/>
+      <FeatureSection/>
+      <BenefitSection/>
     </>
   )
 }

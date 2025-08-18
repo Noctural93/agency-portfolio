@@ -47,7 +47,7 @@ const ResultSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <section className="flex flex-col items-center justify-center pt-[70px] gap-[60px] md:pt-[100px] md:gap-[140px] w-full overflow-hidden">
+    <section className="flex flex-col items-center justify-center pt-[70px] gap-[60px] md:pt-[100px] w-full overflow-hidden">
       <CalloutSection
         sectionIndicatiorText="Results"
         title="Delivering Tangible Results"

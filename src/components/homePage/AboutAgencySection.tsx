@@ -12,7 +12,7 @@ import Button from "../Button";
 const AboutAgencySection = () => {
   return (
     <section className="flex flex-col justify-center pt-[20px] md:pt-[120px] gap-[100px] w-full overflow-hidden">
-      <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_0%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0.02)_100%)] h-[1px] w-full m-w-[1300px]" />
+      <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.25)_50%,rgba(255,255,255,0.08)_100%)] h-[1px] w-[85%] m-w-[1300px] self-center" />
       <div className="flex flex-col-reverse items-start justify-center h-fit w-full max-w-[1440px] mx-auto gap-[84px] px-8 lg:px-22 xl:px-20 2xl:px-32 lg:flex-row lg:items-center">
         <div className="h-[340px] md:h-auto grow lg:max-w-[528px] w-full lg:w-[1px]">
           <div className="relative gap-[10px] flex items-center justify-center h-full md:h-[534px] max-w-full w-full p-0 z-2">
@@ -94,7 +94,7 @@ const AboutAgencySection = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_0%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0.02)_100%)] h-[1px] w-full m-w-[1300px]" />
+      <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0.15)_50%,rgba(255,255,255,0.04)_100%)] h-[1px] w-[85%] self-center m-w-[1300px]" />
     </section>
   );
 };

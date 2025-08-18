@@ -24,7 +24,7 @@ export default function RootLayout({
         <SmoothScroll />
         <CustomCursor/>
         <Header/>
-        <main className="relative overflow-hidden">{children}</main>
+        <main className="relative z-1">{children}</main>
         <Footer/>
         <BlurBottom/>
       </body>

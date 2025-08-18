@@ -31,7 +31,7 @@ const ResultCards = ({
                 <h1 className='text-[24px] font-bold'>{title}</h1>
                 <h1 className='text-[18px] font-[600]'>{subtitle}</h1>
               </div>
-              <div className='bg-[linear-gradient(90deg,rgba(255,255,255,0.02)_0%,rgba(255,255,255,0.1)_50%,rgba(255,255,255,0.02)_100%)] h-[1px] w-[230px]'/>
+              <div className='bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.25)_50%,rgba(255,255,255,0.08)_100%)] h-[1px] w-[230px]'/>
               <div className='flex flex-col items-start justify-center gap-[22px]'>
                 <p className='text-[#ffffff80] text-[16px] -tracking-[0.2px] leading-[26px]'>{description}</p>
                 <div className='flex flex-wrap gap-[10px] text-[#ffffff80] text-[15px]'>

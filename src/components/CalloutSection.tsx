@@ -21,10 +21,10 @@ const CalloutSection = ({
   btnText,
 }: CalloutSectionProps) => {
   return (
-    <div className="flex items-start justify-center h-fit w-full max-w-[1440px] mx-auto gap-[84px] px-8 lg:px-22 xl:px-20 2xl:px-32">
+    <div className="relative flex items-start justify-center h-fit w-full max-w-[1440px] mx-auto gap-[84px] px-8 lg:px-22 xl:px-20 2xl:px-32">
       <div className="relative w-full flex items-start justify-center max-w-[1440px]">
-        <div className="absolute -bottom-[67px] md:-bottom-[97px] lg:-bottom-[47px] md:-left-[185px] xl:-left-[250px] 2xl:-left-[341px] -left-[125px]">
-          <div className="h-[110px] w-[263px] md:h-[170px] md:w-[407px] lg:h-[237px] lg:w-[567px] z-1 relative">
+        <div className="absolute -bottom-[67px] md:-bottom-[97px] lg:-bottom-[47px] -left-[125px] md:-left-[185px] xl:-left-[250px] 2xl:-left-[341px]">
+          <div className="relative h-[110px] w-[263px] md:h-[170px] md:w-[407px] lg:h-[237px] lg:w-[567px] z-1">
             <LeftGradientCard />
           </div>
         </div>
@@ -49,8 +49,8 @@ const CalloutSection = ({
             <Button>{btnText}</Button>
           </div>
         </div>
-        <div className="absolute -bottom-[67px] md:-bottom-[97px] lg:-bottom-[47px] md:-right-[185px] xl:-right-[250px] 2xl:-right-[341px] -right-[125px]">
-          <div className="h-[110px] w-[263px] md:h-[170px] md:w-[407px] lg:h-[237px] lg:w-[567px] z-1 relative">
+        <div className="absolute -bottom-[67px] md:-bottom-[97px] lg:-bottom-[47px] -right-[125px] md:-right-[185px] xl:-right-[250px] 2xl:-right-[341px]">
+          <div className="relative h-[110px] w-[263px] md:h-[170px] md:w-[407px] lg:h-[237px] lg:w-[567px] z-1">
             <RightGradientCard />
           </div>
         </div>
