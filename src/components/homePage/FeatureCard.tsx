@@ -1,5 +1,4 @@
 import dollar from "../../../public/dollar.svg";
-import arrow from "../../../public/arrow.svg";
 import Image from "next/image";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { useState } from "react";
