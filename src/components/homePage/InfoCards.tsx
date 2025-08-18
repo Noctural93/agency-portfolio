@@ -1,4 +1,4 @@
-import { motion, scale, useInView, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import SectionIndicator from "../SectionIndicator";
 import Button from "../Button";
 import Image from "next/image";
