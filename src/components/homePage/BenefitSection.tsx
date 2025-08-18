@@ -16,6 +16,7 @@ const BenefitSection = () => {
             className="text-[#ffffff99] text-[32px] -tracking-[2px] leading-[32px] md:text-[52px] md:leading-[50px] font-[400] md:-tracking-[1.9px]"
           />
         </div>
+        <div></div>
       </div>
     </section>
   );
