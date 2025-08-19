@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
+import useMediaQuery from "@/utils/useMediaQuery";
 
 const CustomCursor = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -12,6 +13,8 @@ const CustomCursor = () => {
   const springConfig = { damping: 35, stiffness: 200 };
   const cursorX = useSpring(mouseX, springConfig);
   const cursorY = useSpring(mouseY, springConfig);
+
+  const isMobile = useMediaQuery("(max-width: 768px)");
 
   useEffect(() => {
     const moveCursor = (e: MouseEvent) => {
@@ -32,6 +35,10 @@ const CustomCursor = () => {
       window.removeEventListener("mouseleave", handleMouseLeave);
     };
   }, [mouseX, mouseY]);
+
+  if(isMobile){
+    return null;
+  }
 
   return (
     <motion.div

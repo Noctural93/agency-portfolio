@@ -11,6 +11,11 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "My Agency",
   description: "Creative Digital Agency Website",
+  appleWebApp: {
+    title: "My Agency",
+    capable: true,
+    statusBarStyle: "black-translucent",
+  },
 };
 
 export default function RootLayout({

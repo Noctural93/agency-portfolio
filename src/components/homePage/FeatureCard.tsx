@@ -35,7 +35,10 @@ const FeatureCard = ({ card }: FeatureCardProps) => {
         <div>
           <div className="flex items-center gap-[10px]">
             <h1 className="text-[16px]">{card.title}</h1>
-            {card?.cta ? <span className="bg-[#0055ff] rounded-[8px] border-[2px] border-[#ffffff26] border-solid px-[10px] py-[4px] text-[13px]">{card.cta}</span> : null}
+            {card?.cta 
+              ? <span className="bg-[#0055ff] rounded-[8px] border-[2px] border-[#ffffff26] border-solid px-[8px] py-[2px] text-[11px]">{card.cta}</span> 
+              : null
+            }
           </div>
           <h1 className="text-[16px] text-[#ffffff99]">{card.subtitle}</h1>
         </div>
