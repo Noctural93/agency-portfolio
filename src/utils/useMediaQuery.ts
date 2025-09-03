@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react';
  * @param initialValue - Default match value (e.g. false for SSR-safe fallback)
  */
 const useMediaQuery = (
-  query: string = '(min-width: 768px)',
+  query: string = '(max-width: 768px)',
   initialValue: boolean = false
 ): boolean => {
   const [matches, setMatches] = useState<boolean>(() => {

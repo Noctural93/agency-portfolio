@@ -58,14 +58,14 @@ const ResultSection = () => {
 
       {/* Inifinte slider */}
       <div
-        className={`relative z-3 w-full h-[530px] ${
+        className={`relative max-w-[1440px] 2xl:px-[120px] z-3 w-full h-[530px] ${
           isMobile ? "overflow-visible" : "overflow-hidden"
         }`}
         ref={containerRef}
       >
         {!isMobile ? (
           <InfiniteSlider
-            duration={20}
+            duration={25}
             itemGap="mx-3"
             containerClassName="p-[10px]"
           >

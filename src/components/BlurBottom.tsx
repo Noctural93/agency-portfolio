@@ -22,9 +22,7 @@ const BlurBottom = () => {
       if(!footer) return;
 
       const footerTop = footer.getBoundingClientRect().top;
-      console.log("Footer Top:", footerTop);
       const windowHeight = window.innerHeight;
-      console.log("Window Height:", windowHeight);
 
       setIsVisible(footerTop > windowHeight);
     }

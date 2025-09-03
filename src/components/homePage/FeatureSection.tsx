@@ -52,8 +52,8 @@ const FeatureSection = () => {
         btnText="View About Agency"
       />
 
-      <div className='flex h-min w-full max-w-[1440px] mx-auto px-8 lg:px-22 xl:px-20 2xl:px-32'>
-        <div className='grid gap-[24px] auto-rows-min grid-cols-1 lg:grid-cols-3 w-full'>
+      <div className='flex h-min w-full max-w-[1440px] mx-auto px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[120px]'>
+        <div className='grid gap-[24px] auto-rows-min grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full'>
           {featureCardData.map((card, index) => (
             <FeatureCard key={index} card={card} />
           ))}

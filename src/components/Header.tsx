@@ -28,7 +28,13 @@ const Header = () => {
           <div className="w-full flex justify-between items-center">
             <div className="flex items-center space-x-8 lg:space-x-10">
               <Link href="/" className="flex items-center">
-                <Image src="/logo.svg" alt="logo" width={45} height={45} />
+                <Image 
+                  src="/logo.svg" 
+                  alt="logo" 
+                  width={45} 
+                  height={45} 
+                  priority
+                />
               </Link>
 
               <div className="hidden md:flex w-[1px] h-[40px] overflow-hidden bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.2)_50%,rgba(255,255,255,0)_100%)]" />
