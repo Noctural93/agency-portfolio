@@ -36,6 +36,11 @@ const BenefitSection = dynamic(() => import('@/components/homePage/BenefitSectio
   loading: () => <div className="h-[100vh] w-full" />
 })
 
+const PortfolioSection = dynamic(() => import('@/components/homePage/PortfolioSection'), {
+  ssr: false,
+  loading: () => <div className="h-[100vh] w-full" />
+})
+
 const Home = () => {
   return (
     <>
@@ -46,6 +51,7 @@ const Home = () => {
       <HowWeWorkSection/>
       <FeatureSection/>
       <BenefitSection/>
+      <PortfolioSection/>
     </>
   )
 }
