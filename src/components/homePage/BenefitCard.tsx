@@ -12,7 +12,7 @@ interface BenefitCardProps {
   extraClass?: string;
 }
 
-const BenefitCard = ({ imgString, title, isNew=false, description, cta_1, cta_2, imgClass, extraClass }: BenefitCardProps) => {
+const BenefitCard = ({ imgString, title, description, cta_1, cta_2, imgClass, extraClass }: BenefitCardProps) => {
   return (
     <div className={`relative w-full border border-solid border-[#ffffff12] flex flex-col items-start justify-start pt-[20px] pb-[40px] pl-[20px] pr-[20px] backdrop-blur-[4px] rounded-[30px] gap-[22px] overflow-hidden`}>
       {
