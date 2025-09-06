@@ -1,12 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./FramerAnimations/MobileNav";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showHeader, setShowHeader] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if(currentScrollY > lastScrollY && currentScrollY > 50) {
+        setShowHeader(false)
+      } else {
+        setShowHeader(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY])
+
   const bgExpanded = "bg-black/30 backdrop-blur-[40px]";
   const bgCollapsed =
     "bg-[linear-gradient(180deg,rgba(0,0,0,0)_10%,rgba(0,0,0,0.3)_100%)] backdrop-blur-md";
@@ -18,7 +39,7 @@ const Header = () => {
     { label: "Contact", href: "/contact" },
   ];
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 overflow-hidden">
+    <nav className={`fixed top-0 left-0 w-full z-50 overflow-hidden transform transition-transform duration-500 ease-in-out ${showHeader ? "translate-y-0" : "-translate-y-full"}`}>
       <div
         className={`border-white/10 flex items-center flex-col justify-center border-b ${
           isOpen ? `${bgExpanded}` : `${bgCollapsed}`

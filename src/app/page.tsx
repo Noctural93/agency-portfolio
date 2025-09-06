@@ -41,6 +41,31 @@ const PortfolioSection = dynamic(() => import('@/components/homePage/PortfolioSe
   loading: () => <div className="h-[100vh] w-full" />
 })
 
+const OurServices = dynamic(() => import('@/components/homePage/OurServices'), {
+  ssr: false,
+  loading: () => <div className="h-[100vh] w-full" />
+})
+
+const LaunchYourSite = dynamic(() => import('@/components/homePage/LaunchYourSite'), {
+  ssr: false,
+  loading: () => <div className="h-[100vh] w-full" />
+})
+
+const PricingSection = dynamic(() => import('@/components/homePage/PricingSection'), {
+  ssr: false,
+  loading: () => <div className="h-[100vh] w-full" />
+})
+
+const TestimonialSection = dynamic(() => import('@/components/homePage/TestimonialSection'), {
+  ssr: false,
+  loading: () => <div className="h-[100vh] w-full" />
+})
+
+const FAQSection = dynamic(() => import('@/components/homePage/FAQSection'), {
+  ssr: false,
+  loading: () => <div className="h-[100vh] w-full" />
+})
+
 const Home = () => {
   return (
     <>
@@ -52,6 +77,11 @@ const Home = () => {
       <FeatureSection/>
       <BenefitSection/>
       <PortfolioSection/>
+      <OurServices/>
+      <LaunchYourSite/>
+      <PricingSection/>
+      <TestimonialSection/>
+      <FAQSection/>
     </>
   )
 }

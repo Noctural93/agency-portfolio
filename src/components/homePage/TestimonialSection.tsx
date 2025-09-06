@@ -1,9 +1,7 @@
-import React from 'react'
-import CalloutSection from '../CalloutSection'
-import Bottomvector from '../../../public/Bottomvector'
-import StackedCards from '../FramerAnimations/StackedCards'
+import Bottomvector from "../../../public/Bottomvector"
+import CalloutSection from "../CalloutSection"
 
-const PortfolioSection = () => {
+const TestimonialSection = () => {
   return (
     <section className='relative flex flex-col items-center justify-center pt-[70px] gap-[100px] md:pt-[100px] w-full'>
       <CalloutSection
@@ -12,9 +10,8 @@ const PortfolioSection = () => {
         subtitle="That Propel Your Website"
         description="Explore our curated work, showcasing collaborations with visionary clients across diverse industries."
         btnText="View Porfolio"
+        showSlider
       />
-
-      <StackedCards/>
 
       {/* bottom vector animation */}
       <div className="relative z-3 w-full max-w-[1440px] h-[30px] md:h-[70px]">
@@ -26,4 +23,4 @@ const PortfolioSection = () => {
   )
 }
 
-export default PortfolioSection
+export default TestimonialSection

@@ -17,9 +17,10 @@ type Props = {
   duration?: number;
   containerClassName?: string;
   itemGap?: string;
+  direction?: "left" | "right";
 };
 
-const InfiniteSlider = ({ children, duration, containerClassName, itemGap }: Props) => {
+const InfiniteSlider = ({ children, duration, containerClassName, itemGap, direction = "left" }: Props) => {
   const [isMounted, setIsMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -70,7 +71,7 @@ const InfiniteSlider = ({ children, duration, containerClassName, itemGap }: Pro
   );
 
   const scroll: TargetAndTransition = {
-    x: ["0%", "-100%"],
+    x: direction == "left" ? ["0%", "-100%"] : ["-100%", "0%"],
     transition: {
       duration: duration || 10,
       ease: "linear",
