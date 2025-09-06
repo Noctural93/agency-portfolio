@@ -1,5 +1,4 @@
 import Image from "next/image";
-import loaderImg from "../../../public/loader_img.png";
 import portfolio1 from "../../../public/portfolio_1.jpg";
 import portfolio2 from "../../../public/portfolio_2.jpg";
 import portfolio3 from "../../../public/portfolio_3.jpg";

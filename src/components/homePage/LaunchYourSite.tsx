@@ -50,7 +50,10 @@ const LaunchYourSite = () => {
             <div className="flex flex-col gap-[12px]">
               <InfiniteSlider duration={35} itemGap="mx-3">
                 {firstRow.map((image, index) => (
-                  <div className="w-[416px] h-[326px] rounded-[30px] border border-solid border-[#ffffff0d] p-[6px] bg-[#080808]">
+                  <div 
+                    className="w-[416px] h-[326px] rounded-[30px] border border-solid border-[#ffffff0d] p-[6px] bg-[#080808]"
+                    key={index}
+                  >
                     <Image
                       src={image}
                       alt={`launch_${index}`}
