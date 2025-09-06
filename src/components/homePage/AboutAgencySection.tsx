@@ -94,7 +94,9 @@ const AboutAgencySection = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.04)_0%,rgba(255,255,255,0.15)_50%,rgba(255,255,255,0.04)_100%)] h-[1px] w-[85%] self-center m-w-[1300px]" />
+
+      {/* Line */}
+      <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.25)_50%,rgba(255,255,255,0.08)_100%)] h-[1px] w-[85%] self-center m-w-[1300px]" />
     </section>
   );
 };
