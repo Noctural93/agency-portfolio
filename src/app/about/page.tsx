@@ -1,10 +1,11 @@
+import FAQSection from '@/components/homePage/FAQSection'
 import React from 'react'
 
 const About = () => {
   return (
-    <div>
-      about
-    </div>
+    <>
+      <FAQSection/>
+    </>
   )
 }
 

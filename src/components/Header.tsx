@@ -1,32 +1,42 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import MobileNav from "./FramerAnimations/MobileNav";
+import { usePathname, useRouter } from "next/navigation";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [showHeader, setShowHeader] = useState(true);
-  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const lastScrollY = useRef(0);
+  const pathname = usePathname();
+  const router = useRouter();
+
+  useEffect(() => {
+    navigationList.forEach(({ href }) => {
+      router.prefetch(href);
+    })
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
 
-      if(currentScrollY > lastScrollY && currentScrollY > 50) {
+      if(currentScrollY > lastScrollY.current && currentScrollY > 50) {
         setShowHeader(false)
       } else {
         setShowHeader(true);
       }
 
-      setLastScrollY(currentScrollY);
+      lastScrollY.current = currentScrollY;
     }
 
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY])
+  }, [])
 
   const bgExpanded = "bg-black/30 backdrop-blur-[40px]";
   const bgCollapsed =
@@ -65,7 +75,8 @@ const Header = () => {
                   <Link
                     key={label}
                     href={href}
-                    className="opacity-[0.6] text-white font-extralight text-sm transition-colors tracking-wide"
+                    prefetch={true}
+                    className={`text-white font-extralight text-sm transition-colors tracking-wide ${pathname === href ? "opacity-100" : "opacity-60"}`}
                   >
                     <span>{label}</span>
                   </Link>
