@@ -42,11 +42,11 @@ const InfoCards = ({ card }: InfoCardsProps) => {
         </div>
         <div className="relative p-[30px] flex flex-col gap-[20px] h-min w-full items-start justify-center z-1">
           <div className="w-full flex justify-between">
-            <div>
+            <div className="p-[14px] rounded-[10px] border border-solid border-[#0055ff26] bg-[radial-gradient(50%_50%_at_50%_50%,rgba(0,153,255,0.12)_0%,rgb(9,9,18)_100%)] shadow-[rgba(0,85,255,0.8)_0px_10px_50px_5px,rgba(255,255,255,0.12)_0px_20px_20px_-5px_inset]">
               <Image src={rocket} alt="icon" />
             </div>
             <SectionIndicator
-              text="Stage 1"
+              text={card.step}
               dot={false}
               className="text-[12px] px-[12px] py-[10px] md:px-[12px] md:py-[10px]"
             />

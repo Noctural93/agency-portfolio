@@ -30,14 +30,14 @@ const CalloutSection = ({
   showSlider = false,
 }: CalloutSectionProps) => {
   return (
-    <div className="relative flex items-start justify-center h-fit w-full max-w-[1440px] mx-auto gap-[84px] px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[120px] overflow-hidden">
+    <div className="relative flex items-start justify-center h-min w-full max-w-[1440px] mx-auto gap-[84px] px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[120px] overflow-hidden">
       <div className="relative w-full flex items-start justify-center max-w-[1440px]">
         <div className="absolute -bottom-[67px] md:-bottom-[97px] lg:-bottom-[47px] -left-[125px] md:-left-[185px] xl:-left-[250px] 2xl:-left-[341px]">
           <div className="relative h-[110px] w-[263px] md:h-[170px] md:w-[407px] lg:h-[237px] lg:w-[567px] z-1">
             <LeftGradientCard />
           </div>
         </div>
-        <div className="flex grow flex-col items-center justify-center h-min gap-[30px] max-w-[630px] w-[1px] relative z-9">
+        <div className="flex grow flex-col items-center justify-center h-min gap-[30px] max-w-[630px] w-[1px] relative z-10 py-3">
           <div className="flex flex-col items-center justify-start gap-[30px] w-full h-min">
             <SectionIndicator text={sectionIndicatiorText} />
             <div className="flex flex-col justify-center items-center">
