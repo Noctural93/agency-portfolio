@@ -25,7 +25,7 @@ const Header = () => {
     navigationList.forEach(({ href }) => {
       router.prefetch(href);
     })
-  }, [navigationList])
+  }, [navigationList, router])
 
   useEffect(() => {
     const handleScroll = () => {
