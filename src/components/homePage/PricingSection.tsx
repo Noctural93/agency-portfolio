@@ -2,6 +2,7 @@ import useMediaQuery from "@/utils/useMediaQuery";
 import LongRigtBox from "../../../public/LongRigtBox";
 import AnimatedText from "../FramerAnimations/AnimatedText";
 import SectionIndicator from "../SectionIndicator";
+import PricingCards from "./PricingCards";
 
 const PricingSection = () => {
   const isMobile = useMediaQuery("(max-width: 1112px)");
@@ -32,6 +33,9 @@ const PricingSection = () => {
             </div>
           </div>
         </div>
+
+        {/* pricing cards */}
+        <PricingCards/>
       </div>
 
       {/* right box */}

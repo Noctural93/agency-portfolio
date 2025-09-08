@@ -4,10 +4,11 @@ import Image from "next/image";
 import AnimatedText from "../FramerAnimations/AnimatedText";
 
 import HomePageAboutSection from "../../../public/HomePageaboutSection.jpeg";
-import Tick from '../../../public/approval.png';
 import star from '../../../public/star.png';
 import SectionIndicator from "../SectionIndicator";
 import Button from "../Button";
+import VerifiedIcon from "../../../public/verifiedIcon";
+
 
 const AboutAgencySection = () => {
   return (
@@ -54,21 +55,11 @@ const AboutAgencySection = () => {
                 <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0)_0%,rgba(255,255,255,0.15)_50%,rgba(255,255,255,0)_100%)] h-[1px] w-[230px]" />
                 <div className="gap-[20px] flex flex-col items-start justify-center max-w-[500px] flex-nowrap p-0">
                   <div className="flex items-center w-full gap-[10px]">
-                    <Image
-                      src={Tick}
-                      alt="tick-icon"
-                      width={23}
-                      loading="lazy"
-                    />
+                    <VerifiedIcon/>
                     <p className="text-[#ffffff99] leading-[26px] -tracking-[0.2px] font-medium text-[16px]">From $0 to $500,000 in revenue.</p>
                   </div>
                   <div className="flex items-center w-full gap-[10px]">
-                    <Image
-                      src={Tick}
-                      alt="tick-icon"
-                      width={23}
-                      loading="lazy"
-                    />
+                    <VerifiedIcon/>
                     <p className="text-[#ffffff99] leading-[26px] -tracking-[0.2px] font-medium text-[16px]">47% growth in new customers.</p>
                   </div>
                 </div>

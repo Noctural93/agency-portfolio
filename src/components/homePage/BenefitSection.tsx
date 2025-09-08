@@ -7,6 +7,8 @@ import reqrev from "../../../public/req_rev.jpg";
 import quickturn from "../../../public/quick_turn.png";
 import publishsec from "../../../public/publish_sec.png";
 import freepricing from "../../../public/free_pricing.jpg";
+import useMediaQuery from "@/utils/useMediaQuery";
+import LongRigtBox from "../../../public/LongRigtBox";
 
 const benefits_1 = [
   "Enhanced UX",
@@ -25,11 +27,12 @@ const benefits_2 = [
 ];
 
 const BenefitSection = () => {
+  const isMobile = useMediaQuery("(max-width: 1112px)");
   return (
-    <section className="flex flex-col items-center justify-center pt-[70px] md:pt-[100px] gap-[70px] md:gap-[100px] w-full overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center pt-[70px] md:pt-[100px] gap-[70px] md:gap-[100px] w-full overflow-hidden">
       <div className="flex items-center flex-col flex-nowrap h-min w-full gap-[40px] md:gap-[70px] max-w-[1440px] px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[120px]">
         <div className="flex items-center justify-start h-min w-full">
-          <div className="flex items-center justify-center max-w-[860px] grow flex-col gap-[40px] w-[1px]">
+          <div className="flex items-center justify-center max-w-[860px] grow flex-col gap-[30px] w-[1px]">
             <div className="flex flex-col flex-nowrap gap-[40px] h-min w-full">
               <SectionIndicator text="Agency Benefits" dot={true} />
               <div className="w-full h-min flex items-start justify-center flex-col flex-nowrap gap-[10px]">
@@ -154,6 +157,13 @@ const BenefitSection = () => {
           </div>
         </div>
       </div>
+
+      {/* right box */}
+      {isMobile ? null : (
+        <div className="absolute -right-[183px] top-[225px] w-[1409px] h-[237px]">
+          <LongRigtBox />
+        </div>
+      )}
 
       {/* Line */}
       <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.25)_50%,rgba(255,255,255,0.08)_100%)] h-[1px] w-[85%] self-center m-w-[1300px]" />

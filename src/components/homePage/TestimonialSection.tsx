@@ -1,5 +1,6 @@
 import Bottomvector from "../../../public/Bottomvector"
 import CalloutSection from "../CalloutSection"
+import TestimonialCards from "./TestimonialCards"
 
 const TestimonialSection = () => {
   return (
@@ -12,6 +13,8 @@ const TestimonialSection = () => {
         btnText="View Porfolio"
         showSlider
       />
+
+      <TestimonialCards/>
 
       {/* bottom vector animation */}
       <div className="relative z-3 w-full max-w-[1440px] h-[30px] md:h-[70px]">

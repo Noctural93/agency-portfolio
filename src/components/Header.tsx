@@ -14,10 +14,18 @@ const Header = () => {
   const pathname = usePathname();
   const router = useRouter();
 
+  const navigationList = [
+    { label: "Home", href: "/" },
+    { label: "About", href: "/about" },
+    { label: "Portfolio", href: "/portfolio" },
+    { label: "Contact", href: "/contact" },
+  ];
+
   useEffect(() => {
     navigationList.forEach(({ href }) => {
       router.prefetch(href);
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
@@ -41,13 +49,6 @@ const Header = () => {
   const bgExpanded = "bg-black/30 backdrop-blur-[40px]";
   const bgCollapsed =
     "bg-[linear-gradient(180deg,rgba(0,0,0,0)_10%,rgba(0,0,0,0.3)_100%)] backdrop-blur-md";
-
-  const navigationList = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Contact", href: "/contact" },
-  ];
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 overflow-hidden transform transition-transform duration-500 ease-in-out ${showHeader ? "translate-y-0" : "-translate-y-full"}`}>
       <div
