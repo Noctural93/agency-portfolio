@@ -1,3 +1,5 @@
+"use client"
+
 import SectionIndicator from "../SectionIndicator";
 import AnimatedText from "../FramerAnimations/AnimatedText";
 import { FaPlus } from "react-icons/fa6";
