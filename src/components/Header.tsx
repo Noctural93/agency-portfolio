@@ -25,7 +25,8 @@ const Header = () => {
     navigationList.forEach(({ href }) => {
       router.prefetch(href);
     })
-  }, [navigationList, router])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
