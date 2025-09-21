@@ -63,7 +63,7 @@ const HeroSection = () => {
                 Connect with Us
               </button>
               <button className='bg-[#ffffff26] backdrop-blur-[2.5px] rounded-lg px-[18px] py-[10px] text-nowrap'>
-                What is Landin?
+                What is MyAgency?
               </button>
             </div>
           </motion.div>
