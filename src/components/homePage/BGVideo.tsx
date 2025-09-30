@@ -1,8 +1,12 @@
-import React from 'react'
+import { twMerge } from "tailwind-merge";
 
-const BGVideo = () => {
+interface BGVideoProps {
+  childrenClass?: string;
+}
+
+const BGVideo = ({ childrenClass }: BGVideoProps) => {
   return (
-    <section className='absolute top-0 left-0 inset-0 w-full h-[724px] md:h-[810px] overflow-hidden'>
+    <section className={twMerge('absolute top-0 left-0 inset-0 w-full h-[724px] md:h-[810px] overflow-hidden', childrenClass)}>
       <video
         autoPlay
         loop
