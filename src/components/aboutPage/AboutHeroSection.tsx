@@ -32,7 +32,7 @@ const AboutHeroSection = () => {
                   transition={{ duration: 0.5, delay: 0.6 }}
                   className="w-full"
                 >
-                  Let's Deep Dive!
+                  {"Let's Deep Dive!"}
                 </motion.h1>
               </div>
             </div>

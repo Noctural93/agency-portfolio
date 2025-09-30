@@ -47,7 +47,7 @@ const AwardSection = () => {
               </div>
             </div>
             <p className="text-[#ffffff80]">
-              We're proud to have been recognized with several
+              {"We're proud to have been recognized with several"}
               <br />
               awards for our hard work and dedication.
             </p>
