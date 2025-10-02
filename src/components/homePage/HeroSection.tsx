@@ -5,15 +5,17 @@ import { motion } from 'framer-motion';
 import AnimatedText from "../FramerAnimations/AnimatedText";
 import TopCard from "../TopCard";
 import {InfiniteSlider} from '../FramerAnimations/InfiniteSlider';
+import Image from 'next/image';
 
 import ipsum from '../../../public/InfiniteSliderIcons/ipsum.png';
 import logip from '../../../public/InfiniteSliderIcons/logip.png';
 import log from '../../../public/InfiniteSliderIcons/log.png';
 import myLogo from '../../../public/InfiniteSliderIcons/myLogo.png';
-import Image from 'next/image';
+import useMediaQuery from '@/utils/useMediaQuery';
 
 
 const HeroSection = () => {
+  const isMobile = useMediaQuery('(max-width: 768px)');
   return (
     <section className="relative w-full h-fit overflow-hidden flex flex-col gap-[70px]">
       <div className="h-[85px]"></div>
@@ -89,7 +91,16 @@ const HeroSection = () => {
           </InfiniteSlider>
         </motion.div>
       </div>
-      <div className='absolute top-0 left-0 h-full w-full z-1 overflow-hidden backdrop-blur-[15px]'/>
+      <div className='absolute top-0 left-0 h-full w-full z-[1] overflow-hidden backdrop-blur-[15px]'/>
+      {!isMobile && (
+        <div className='absolute top-0 z-10 h-full w-full'>
+          <iframe
+            src="https://my.spline.design/genkubgreetingrobot-khVuIoeQ99plGmfLcJgFyPjb/"
+            className="h-full absolute top-1/6 -right-1/3 w-full"
+            allowFullScreen
+          />
+        </div>
+      )}
     </section>
   );
 };
