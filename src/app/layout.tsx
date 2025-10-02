@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import BlurBottom from "@/components/BlurBottom";
 import CustomCursor from "@/components/FramerAnimations/CustomCursor";
 import SmoothScroll from "@/utils/SmoothScroll";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
         <main className="relative z-1">{children}</main>
         <Footer/>
         <BlurBottom/>
+        <SpeedInsights/>
       </body>
     </html>
   );
