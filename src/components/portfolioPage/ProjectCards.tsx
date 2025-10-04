@@ -27,7 +27,7 @@ const ProjectCards = () => {
   ];
   return (
     <div className="relative grid grid-cols-2 h-fit w-full max-w-[1440px] mx-auto gap-[20px] px-[120px]">
-      {cards.map((card, i) => {
+      {cards.map((card) => {
         return (
           <motion.div
             key={card.id}
