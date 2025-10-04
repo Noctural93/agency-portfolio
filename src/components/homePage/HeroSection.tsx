@@ -93,7 +93,7 @@ const HeroSection = () => {
       </div>
       <div className='absolute top-0 left-0 h-full w-full z-[1] overflow-hidden backdrop-blur-[15px]'/>
       {!isMobile && (
-        <div className='absolute top-0 z-10 h-full w-full'>
+        <div className='absolute top-0 z-10 h-full w-full max-w-[1440px] left-1/2 -translate-x-1/2'>
           <iframe
             src="https://my.spline.design/genkubgreetingrobot-khVuIoeQ99plGmfLcJgFyPjb/"
             className="h-full absolute top-1/6 -right-1/3 w-full"

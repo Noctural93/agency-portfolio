@@ -1,7 +1,7 @@
 'use client'
 
-import ContactSection from '@/components/contactPage/ContactSection';
-import dynamic from 'next/dynamic';
+import ProjectsSection from "@/components/portfolioPage/ProjectsSection";
+import dynamic from "next/dynamic";
 
 const FAQSection = dynamic(() => import('@/components/homePage/FAQSection'), {
   ssr: false,
@@ -13,14 +13,14 @@ const BGVideo = dynamic
   ssr: false,
 });
 
-const Contact = () => {
+const Portfolio = () => {
   return (
     <>
       <BGVideo childrenClass="h-[624px] md:h-[724px]" />
-      <ContactSection />
+      <ProjectsSection />
       <FAQSection />
     </>
-  )
-}
+  );
+};
 
-export default Contact
+export default Portfolio;
