@@ -16,7 +16,7 @@ const BGVideo = ({ childrenClass }: BGVideoProps) => {
       >
         <source src="/hero_bg_video.mp4" type="video/mp4" />
       </video>
-      <div className="absolute -bottom-[1px] left-0 w-full h-[84px] md:h-[180px] bg-gradient-to-t from-black to-transparent z-10" />
+      <div className="absolute -bottom-[1px] left-0 w-full h-[84px] md:h-[180px] bg-gradient-to-t from-black to-transparent z-[-1]" />
     </section>
   )
 }

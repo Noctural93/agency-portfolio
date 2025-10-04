@@ -16,7 +16,11 @@ export default function StackingCards() {
       heading: "Reven Studio",
       img: portfolio2,
     },
-    { id: 3, heading: "White Stag", img: portfolio3 },
+    { 
+      id: 3, 
+      heading: "White Stag", 
+      img: portfolio3 
+    },
   ];
 
   return (
