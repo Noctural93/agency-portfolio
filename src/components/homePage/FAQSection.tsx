@@ -67,7 +67,7 @@ const FAQSection = () => {
                 <div className="flex flex-col items-center w-full border border-solid border-[#ffffff12] bg-[#080808] rounded-[20px] p-[30px] cursor-pointer" onClick={() => setActiveFaq(index === activeFaq ? null : index)} key={index}>
                   <div className="flex justify-between items-center w-full">
                     <h3>{faq.title}</h3>
-                    <FaPlus className={`transition-transform duration-400 ${activeFaq == index ? 'rotate-45' : 'rotate-0'}`}/>
+                    <FaPlus className={`transition-transform duration-400 ${activeFaq == index ? 'rotate-[calc(90deg+45deg)]' : 'rotate-0'}`}/>
                   </div>
 
                   <AnimatePresence initial={false}>
