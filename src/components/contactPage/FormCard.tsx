@@ -46,7 +46,7 @@ const FormCard = () => {
           </div>
 
           <div className="relative flex flex-col w-full h-min gap-[14px]">
-            <p>What's the type of your company?*</p>
+            <p>{"What's the type of your company?*"}</p>
             <SelectInContact />
           </div>
         </div>
