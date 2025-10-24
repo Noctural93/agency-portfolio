@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 import Footer from "@/components/Footer";
 import BlurBottom from "@/components/BlurBottom";
 import CustomCursor from "@/components/FramerAnimations/CustomCursor";
-import SmoothScroll from "@/utils/SmoothScroll";
+import ReactLenis from "lenis/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -26,14 +26,22 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-darkBlue text-white h-full overscroll-none scroll-smooth`}>
-        <SmoothScroll />
-        <CustomCursor/>
-        <Header/>
-        <main className="relative z-1">{children}</main>
-        <Footer/>
-        <BlurBottom/>
-        <SpeedInsights/>
+      <body
+        className={`${inter.className} bg-darkBlue text-white h-full overscroll-none scroll-smooth`}
+      >
+        <ReactLenis
+          root
+          options={{
+            lerp: 0.06,
+          }}
+        >
+          <CustomCursor />
+          <Header />
+          <main className="relative z-1">{children}</main>
+          <Footer />
+          <BlurBottom />
+          <SpeedInsights />
+        </ReactLenis>
       </body>
     </html>
   );

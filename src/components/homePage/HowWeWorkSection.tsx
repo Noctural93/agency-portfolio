@@ -40,18 +40,17 @@ const HowWeWorkSection = () => {
               <SectionIndicator text="How We Work?" />
               <div className="w-full h-min flex items-start justify-center flex-col flex-nowrap">
                 <AnimatedText
-                  text="We Simplify The Journey"
+                  text="A Process That Works for You"
                   className="text-[32px] -tracking-[2px] leading-[32px] md:text-[52px] md:leading-[50px] font-[400] md:-tracking-[1.9px]"
                 />
-                <AnimatedText
+                {/* <AnimatedText
                   text="From Design To Launch"
                   className="text-[#ffffff99] text-[32px] -tracking-[2px] leading-[32px] md:text-[52px] md:leading-[50px] font-[400] md:-tracking-[1.9px]"
-                />
+                /> */}
               </div>
             </div>
             <p className="text-[#ffffff99] text-[16px] leading-[26px] font-[400] -tracking-[0.2px] max-w-[540px]">
-              We make it easy to bring your ideas to life, guiding you from
-              concept to a fully launched product.
+              From discovery to launch, our agile workflow keeps things transparent, collaborative, and efficient. We listen, prototype, test, and deliver—ensuring every solution is tailored to your goals.
             </p>
           </div>
 
