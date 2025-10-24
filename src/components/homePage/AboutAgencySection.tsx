@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import AnimatedText from "../FramerAnimations/AnimatedText";
-import useMediaQuery from "@/utils/useMediaQuery";
 
 // import HomePageAboutSection from "../../../public/HomePageaboutSection.jpeg";
 import star from "../../../public/star.png";
@@ -14,7 +13,6 @@ import React from "react";
 const Spline = React.lazy(() => import("@splinetool/react-spline"));
 
 const AboutAgencySection = () => {
-  const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <section className="relative flex flex-col justify-center pt-[20px] md:pt-[120px] gap-[100px] w-full overflow-hidden z-20">
       <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.15)_50%,rgba(255,255,255,0.08)_100%)] h-[1px] w-[85%] self-center m-w-[1300px]" />
