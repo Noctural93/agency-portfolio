@@ -6,41 +6,48 @@ import SlideShow from "../FramerAnimations/SlideShow";
 import CalloutSection from "../CalloutSection";
 import ResultCards from "./ResultCards";
 import Bottomvector from "../../../public/Bottomvector";
+import swacpayImg from '../../../public/projects/swacpay.jpg'
 
 const ResultCardsData = [
   {
-    title: "OSIO",
-    subtitle: "Sling Interactive Tech",
+    id: 1,
+    platformType: ["🪙 FinTech"],
+    title: "Swacpay The Next Generation Payment Method",
+    image: swacpayImg,
     description:
-      "Expanded market reach, tapping into new demographics with a driven approach.",
-    keyValues_1: "20% Market Share",
-    keyValues_2: "45% Enhanced visibility",
+      "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
+    keyValues: ["web"],
   },
   {
-    title: "Basel",
-    subtitle: "Crimson Studio",
+    id: 2,
+    platformType: ["🪙 FinTech"],
+    title: "Swacpay The Next Generation Payment Method",
+    image: swacpayImg,
     description:
-      "Achieved a 30% increase in user engagement through innovative design and strategic content.",
-    keyValues_1: "30% Increase in Sales",
-    keyValues_2: "40% Boost in Retention",
+      "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
+    keyValues: ["web"],
   },
   {
-    title: "London",
-    subtitle: "Raven Company",
+    id: 3,
+    platformType: ["🪙 FinTech"],
+    title: "Swacpay The Next Generation Payment Method",
+    image: swacpayImg,
     description:
-      "Streamlined operations, reducing costs by with our automation solutions.",
-    keyValues_1: "25% Conversion Rates",
-    keyValues_2: "50% Reduced in CPA",
+      "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
+    keyValues: ["web"],
   },
   {
-    title: "Manila",
-    subtitle: "Gotham Wonder",
+    id: 4,
+    platformType: ["🪙 FinTech"],
+    title: "Swacpay The Next Generation Payment Method",
+    image: swacpayImg,
     description:
-      "Boosted customer engagement with a digital presence and targeted campaigns.",
-    keyValues_1: "60% Increased Traffic",
-    keyValues_2: "35% Growth in Sales",
-  },
+      "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
+    keyValues: ["web"],
+  }
 ];
+
+const MemoResultCard = React.memo(ResultCards);
 
 const ResultSection = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
@@ -50,46 +57,46 @@ const ResultSection = () => {
     <section className="flex flex-col items-center justify-center pt-[70px] gap-[60px] md:pt-[100px] w-full overflow-hidden">
       <CalloutSection
         sectionIndicatiorText="Results"
-        title="Delivering Tangible Results"
-        subtitle="That Propel Your Success"
-        description="At the core of everything we do lies a commitment to delivering measurable outcomes that drive your success."
+        title="Driven by Impact"
+        subtitle="Measured by Results"
+        description="Our success is defined by yours. From startups to enterprises, we’ve helped brands increase visibility, boost engagement, and scale revenue with innovative strategies and powerful digital products."
         btnText="Book a 15-min call"
       />
 
       {/* Inifinte slider */}
       <div
-        className={`relative max-w-[1440px] 2xl:px-[120px] z-3 w-full h-[530px] ${
+        className={`max-w-[1440px] 2xl:px-[120px] z-3 w-full h-[630px] py-[10px] ${
           isMobile ? "overflow-visible" : "overflow-hidden"
         }`}
         ref={containerRef}
       >
         {!isMobile ? (
           <InfiniteSlider
-            duration={25}
+            duration={45}
             itemGap="mx-3"
             containerClassName="p-[10px]"
           >
             {ResultCardsData.map((item) => (
-              <ResultCards
-                key={item.title}
+              <MemoResultCard
+                key={item.id}
+                platformType={item.platformType}
+                img={item.image}
                 title={item.title}
-                subtitle={item.subtitle}
                 description={item.description}
-                keyValues_1={item.keyValues_1}
-                keyValues_2={item.keyValues_2}
+                keyValues={item.keyValues}
               />
             ))}
           </InfiniteSlider>
         ) : (
           <SlideShow>
             {ResultCardsData.map((item) => (
-              <ResultCards
-                key={item.title}
+              <MemoResultCard
+                key={item.id}
+                platformType={item.platformType}
+                img={item.image}
                 title={item.title}
-                subtitle={item.subtitle}
                 description={item.description}
-                keyValues_1={item.keyValues_1}
-                keyValues_2={item.keyValues_2}
+                keyValues={item.keyValues}
               />
             ))}
           </SlideShow>

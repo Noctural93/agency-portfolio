@@ -62,7 +62,7 @@ const InfiniteSlider = ({ children, duration, containerClassName, itemGap, direc
       return [...Array(arraySize)].map((_, i) => (
         <Fragment key={i}>
           {Children.map(children, (child) => (
-            <div className={itemGap}>{child}</div>
+            <div className={`${itemGap} h-full`}>{child}</div>
           ))}
         </Fragment>
       ));
@@ -88,21 +88,21 @@ const InfiniteSlider = ({ children, duration, containerClassName, itemGap, direc
     >
       <motion.div
         animate={scroll}
-        className="flex-shrink-0 flex-grow-0 basis-auto min-w-full flex flex-row items-center"
+        className="flex-shrink-0 flex-grow-0 basis-auto min-w-full h-full flex flex-row items-center"
       >
         <div
           ref={sliderRef}
-          className="flex-shrink-0 flex-grow-0 basis-auto flex min-w-fit flex-row items-center"
+          className="flex-shrink-0 flex-grow-0 basis-auto flex h-full min-w-fit flex-row items-center"
         >
           {Children.map(children, (child) => (
-            <div className={itemGap}>{child}</div>
+            <div className={`${itemGap} h-full`}>{child}</div>
           ))}
         </div>
         {multiplyChildren(multiplier - 1)}
       </motion.div>
       <motion.div
         animate={scroll}
-        className="flex-shrink-0 flex-grow-0 basis-auto min-w-full flex flex-row items-center"
+        className="flex-shrink-0 flex-grow-0 basis-auto min-w-full h-full flex flex-row items-center"
       >
         {multiplyChildren(multiplier)}
       </motion.div>

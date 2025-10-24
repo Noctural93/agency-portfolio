@@ -66,6 +66,7 @@ const Header = () => {
                   width={45} 
                   height={45} 
                   priority
+                  className="invert brightness-0"
                 />
               </Link>
 

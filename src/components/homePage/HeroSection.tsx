@@ -36,7 +36,7 @@ const HeroSection = () => {
                   transition={{ duration: 0.5, delay: 0.6 }}
                   className="w-full"
                 >
-                  Premium Agency
+                  Transforming Ideas
                 </motion.h1>
                 <motion.h1
                   initial={{ opacity: 0 }}
@@ -44,12 +44,12 @@ const HeroSection = () => {
                   transition={{ duration: 0.5, delay: 0.6 }}
                   className="w-full"
                 >
-                  for Creatives.
+                  into Digital Reality.
                 </motion.h1>
               </div>
             </div>
             <AnimatedText
-              text="We specialize in crafting unique digital presence that help businesses grow and stand out in their industries."
+              text="At Davi, we design, build, and scale digital experiences that help businesses stand out, grow faster, and connect better. From branding to AI-powered solutions—we make it happen."
               className="text-[16px] text-[#ffffff99] max-w-[500px] w-full"
               delayAnimation={0.9}
             />
@@ -64,7 +64,7 @@ const HeroSection = () => {
                 Connect with Us
               </button>
               <button className="bg-[#ffffff26] backdrop-blur-[2.5px] rounded-lg px-[18px] py-[10px] text-nowrap">
-                What is MyAgency?
+                What is Davi?
               </button>
             </div>
           </motion.div>
