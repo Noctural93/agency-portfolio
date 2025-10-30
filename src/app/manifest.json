@@ -1,6 +1,6 @@
 {
-  "name": "My Agency",
-  "short_name": "Agency",
+  "name": "Davi",
+  "short_name": "Davi",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -16,6 +16,6 @@
     }
   ],
   "theme_color": "#ffffff",
-  "background_color": "#000000",
+  "background_color": "#ffffff",
   "display": "standalone"
 }
