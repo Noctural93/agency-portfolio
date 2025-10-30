@@ -10,10 +10,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "My Agency",
+  title: "Davi",
   description: "Creative Digital Agency Website",
   appleWebApp: {
-    title: "My Agency",
+    title: "Davi",
     capable: true,
     statusBarStyle: "black-translucent",
   },
