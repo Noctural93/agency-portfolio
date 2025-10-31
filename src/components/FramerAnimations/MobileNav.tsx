@@ -1,3 +1,5 @@
+"use client"
+
 import { motion, AnimatePresence, Variants } from 'framer-motion';
 import Link from 'next/link';
 import React from 'react';

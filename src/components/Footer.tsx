@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import footerImg from "../../public/fotter_img.avif";
 import SectionIndicator from "./SectionIndicator";
 import { useState } from "react";
 import Button from "./Button";
@@ -16,9 +15,10 @@ const Footer = () => {
       <div className="relative flex flex-col items-center gap-[90px] pt-[100px] pb-[24px] h-min w-full border-t border-solid border-[#ffffff1a]">
         <div className="absolute top-0 left-0 h-full w-full z-1">
           <Image
-            src={footerImg}
+            src="/fotter_img.avif"
             alt="Footer Image"
-            className="w-full h-full object-cover object-center"
+            fill
+            className="object-cover object-center"
           />
         </div>
         <div className="relative px-[30px] lg:px-[50px] xl:px-[70px] flex items-start justify-start xl:justify-between flex-nowrap max-w-[1440px] w-full z-10 flex-col gap-[50px] xl:flex-row ">

@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion";
 import TopCard from "../TopCard";
 import AnimatedText from "../FramerAnimations/AnimatedText";

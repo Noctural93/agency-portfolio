@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image";
 import React, { useState } from "react";
 import { FaXTwitter } from "react-icons/fa6";

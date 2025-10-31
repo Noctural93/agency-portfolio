@@ -1,3 +1,5 @@
+"use client";
+
 import useMediaQuery from "@/utils/useMediaQuery";
 import LongRigtBox from "../../../public/LongRigtBox";
 import AnimatedText from "../FramerAnimations/AnimatedText";

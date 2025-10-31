@@ -1,3 +1,5 @@
+"use client";
+
 import useMediaQuery from "@/utils/useMediaQuery";
 import Bottomvector from "../../../public/Bottomvector";
 import StackedCards from "../FramerAnimations/StackedCards";

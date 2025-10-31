@@ -1,3 +1,5 @@
+"use client"
+
 import { motion, TargetAndTransition } from "framer-motion";
 import {
   Children,

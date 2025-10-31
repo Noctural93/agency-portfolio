@@ -22,9 +22,10 @@ const TeamMemberCard = ({ card }: TeamMemberProps) => {
     >
       <div className="relative flex rounded-[20px]">
         <Image
-          src={TeamMember}
+          src="/teamMember.avif"
           alt={card.name}
-          className="h-full w-full rounded-[20px] object-cover object-center"
+          fill
+          className="rounded-[20px] object-cover object-center"
         />
         <div className="absolute bottom-1 left-1/2 -translate-x-1/2 w-[90%] flex justify-between items-center border border-solid border-[#0055ff26] backdrop-blur-[2px] bg-[#000e2b] p-[16px] rounded-[12px] shadow-[rgba(0,0,0,0.35)_2px_4px_24px_10px] overflow-hidden">
           <div className="absolute inset-0 bg-[radial-gradient(43%_50%,rgba(9,9,18,0.15)_0%,rgb(9,9,18)_100%)] shadow-[rgba(0,85,255,0.1)_0px_10px_10px_-1px_inset] rounded-[12px] z-0" />

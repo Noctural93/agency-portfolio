@@ -1,6 +1,5 @@
 import SectionIndicator from "../SectionIndicator";
 import AnimatedText from "../FramerAnimations/AnimatedText";
-import awardImg from '../../../public/awardLogo.avif';
 import Image from "next/image";
 import bg from '../../../public/infocard-bg.png';
 
@@ -66,8 +65,10 @@ const AwardSection = () => {
                                 />
                             </div>
                             <Image
-                                src={awardImg}
+                                src="/awardLogo.avif"
                                 alt={card.title}
+                                width={88}
+                                height={26}
                                 className="h-[26px] w-[88px]"
                             />
                         </div>

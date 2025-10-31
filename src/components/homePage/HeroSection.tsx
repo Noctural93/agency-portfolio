@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import AnimatedText from "../FramerAnimations/AnimatedText";
 import TopCard from "../TopCard";
 import { InfiniteSlider } from "../FramerAnimations/InfiniteSlider";
-// import useMediaQuery from "@/utils/useMediaQuery";
 import Image from "next/image";
 
 import ipsum from "../../../public/InfiniteSliderIcons/ipsum.png";
@@ -14,7 +13,6 @@ import log from "../../../public/InfiniteSliderIcons/log.png";
 import myLogo from "../../../public/InfiniteSliderIcons/myLogo.png";
 
 const HeroSection = () => {
-  // const isMobile = useMediaQuery("(max-width: 768px)");
   return (
     <section className="relative w-full h-fit overflow-hidden flex flex-col gap-[70px]">
       <div className="h-[85px]"></div>
@@ -95,19 +93,6 @@ const HeroSection = () => {
         </motion.div>
       </div>
       <div className="absolute top-0 left-0 h-full w-full z-[1] overflow-hidden backdrop-blur-[15px]" />
-      {/* {!isMobile && (
-        <div className="absolute top-[3%] left-1/2 -translate-x-1/2 h-full w-full max-w-[1440px] z-[10] overflow-hidden">
-          <iframe
-            src="https://my.spline.design/genkubgreetingrobot-khVuIoeQ99plGmfLcJgFyPjb/"
-            className="absolute top-[16%] -right-[33%] h-full w-full"
-            loading="lazy"
-            style={{
-              transform: "translateZ(0)",
-              willChange: "transform",
-            }}
-          />
-        </div>
-      )} */}
     </section>
   );
 };

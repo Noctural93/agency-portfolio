@@ -1,3 +1,5 @@
+"use client"
+
 import dollar from "../../../public/dollar.svg";
 import Image from "next/image";
 import { FaArrowLeftLong } from "react-icons/fa6";

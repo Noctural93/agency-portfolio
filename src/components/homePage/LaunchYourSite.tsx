@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import CalloutSection from "../CalloutSection";
 import { InfiniteSlider } from "../FramerAnimations/InfiniteSlider";
@@ -58,6 +60,7 @@ const LaunchYourSite = () => {
                       src={image}
                       alt={`launch_${index}`}
                       className="h-full w-full object-cover object-center rounded-[30px] border border-solid border-[#ffffff0d]"
+                      loading="lazy"
                     />
                   </div>
                 ))}
@@ -72,6 +75,7 @@ const LaunchYourSite = () => {
                       src={image}
                       alt={`launch_${index}`}
                       className="h-full w-full object-cover object-center rounded-[30px] border border-solid border-[#ffffff0d]"
+                      loading="lazy"
                     />
                   </div>
                 ))}
@@ -88,6 +92,7 @@ const LaunchYourSite = () => {
                     src={image}
                     alt={`launch_mobile_${index}`}
                     className="w-full h-full object-cover object-center rounded-[30px]"
+                    loading="lazy"
                   />
                 </div>
               ))}

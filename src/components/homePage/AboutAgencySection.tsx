@@ -1,16 +1,10 @@
-"use client";
-
 import Image from "next/image";
 import AnimatedText from "../FramerAnimations/AnimatedText";
-
-// import HomePageAboutSection from "../../../public/HomePageaboutSection.jpeg";
 import star from "../../../public/star.png";
 import SectionIndicator from "../SectionIndicator";
 import Button from "../Button";
 import VerifiedIcon from "../../../public/verifiedIcon";
-import React from "react";
-
-const Spline = React.lazy(() => import("@splinetool/react-spline"));
+import SplineModel from "../SplineModel";
 
 const AboutAgencySection = () => {
   return (
@@ -33,23 +27,9 @@ const AboutAgencySection = () => {
             <div className="absolute bottom-[8px] left-1/2 -translate-x-1/2 bg-[#0055ff] blur-[40px] rounded-[100%] w-[285px] h-[53px] z-1 pointer-events-none" />
           </div> */}
           {
-            <div className="absolute top-[2%] left-[8%] h-full w-full z-[10]">
-              {/* <iframe
-                src="https://my.spline.design/genkubgreetingrobot-qlor9pj00l8TlNRBFPbYMzMH/"
-                className="h-full w-full scale-[1.3] origin-center"
-                loading="lazy"
-                style={{
-                  transform: "translateZ(0)",
-                  willChange: "transform",
-                }}
-              /> */}
-              <Spline
-                scene="https://prod.spline.design/NT0jpktJaPOVyFIW/scene.splinecode"
-                className="h-full w-full scale-[1.3] origin-center"
-              />
-            </div>
+            <SplineModel />
           }
-          <div className="absolute bottom-0 right-0 h-[23px] w-[170px] z-[11] bg-black"/>
+          <div className="absolute bottom-0 right-0 h-[23px] w-[170px] z-[11] bg-black" />
         </div>
         <div className="h-min flex grow max-w-[700px] w-full lg:w-[1px] gap-[30px] items-start justify-center flex-col flex-nowrap">
           <div className="flex justify-start items-start flex-col gap-[30px] w-full h-min">
@@ -66,7 +46,10 @@ const AboutAgencySection = () => {
             </div>
           </div>
           <p className="text-[#ffffff99] text-[16px] leading-[26px] font-[400] -tracking-[0.2px]">
-            We are a passionate team of creators, developers, and strategists turning bold ideas into impactful digital solutions. With a blend of creativity and technology, we empower businesses to grow smarter, faster, and stronger.
+            We are a passionate team of creators, developers, and strategists
+            turning bold ideas into impactful digital solutions. With a blend of
+            creativity and technology, we empower businesses to grow smarter,
+            faster, and stronger.
           </p>
           <div className="gap-[50px] flex flex-col w-full h-min items-start justify-center">
             <div className="gap-[30px] flex items-start flex-col h-min justify-center w-full">

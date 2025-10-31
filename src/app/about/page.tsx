@@ -1,39 +1,37 @@
-'use client'
-
 import HomePageAboutSection from "../../../public/HomePageaboutSection.jpeg";
 import dynamic from 'next/dynamic'
 
 const BGVideo = dynamic(() => import("@/components/homePage/BGVideo"), {
-  ssr: false,
+  ssr: true,
 });
 
 const AboutHeroSection = dynamic(() => import("@/components/aboutPage/AboutHeroSection"), {
-  ssr: false,
+  ssr: true,
   loading: () => <div className="h-[100vh] w-full" />
 });
 
 const ImageTextSection = dynamic(() => import('@/components/ImageTextSection'), {
-  ssr: false,
+  ssr: true,
   loading: () => <div className="h-[100vh] w-full" />
 });
 
 const TeamMemberSection = dynamic(() => import("@/components/aboutPage/TeamMemberSection"), {
-  ssr: false,
+  ssr: true,
   loading: () => <div className="h-[100vh] w-full"/>
 })
 
 const AwardSection = dynamic(() => import("@/components/aboutPage/AwardSection"), {
-  ssr: false,
+  ssr: true,
   loading: () => <div className="h-[100vh] w-full"/>
 });
 
 const ToolsSection = dynamic(() => import("@/components/aboutPage/ToolsSection"), {
-  ssr: false,
+  ssr: true,
   loading: () => <div />
 })
 
 const FAQSection = dynamic(() => import('@/components/homePage/FAQSection'), {
-  ssr: false,
+  ssr: true,
   loading: () => <div className="h-[100vh] w-full" />
 });
 
