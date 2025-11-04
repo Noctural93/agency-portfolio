@@ -71,11 +71,11 @@ const Home = () => {
       <HeroSection/>
       <AboutAgencySection/>
       <ResultSection/>
+      <OurServices/>
       <HowWeWorkSection/>
       <FeatureSection/>
       <BenefitSection/>
       <PortfolioSection/>
-      <OurServices/>
       <LaunchYourSite/>
       <PricingSection/>
       <TestimonialSection/>

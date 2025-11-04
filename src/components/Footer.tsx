@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
         <div className="relative px-[30px] lg:px-[50px] xl:px-[70px] flex items-start justify-start xl:justify-between flex-nowrap max-w-[1440px] w-full z-10 flex-col gap-[50px] xl:flex-row ">
           <div className="flex flex-col gap-[26px] h-min w-full max-w-[360px]">
-            <Image src="/logo.svg" alt="logo" width={78} height={78} priority />
+            <Image src="/logo.svg" alt="logo" width={78} height={78} priority className="invert brightness-0"/>
             <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.25)_50%,rgba(255,255,255,0.08)_100%)] h-[1px] w-[230px] self-start" />
             <p>
               Made remotely with 💙 and passion

@@ -1,88 +1,63 @@
-import React from "react";
-import AnimatedText from "../FramerAnimations/AnimatedText";
-import SectionIndicator from "../SectionIndicator";
-import Image from "next/image";
-import HomePageAboutSection from "../../../public/HomePageaboutSection.jpeg";
-import InfoCards from "./InfoCards";
+import CalloutSection from '../CalloutSection'
+import FeatureCard from './FeatureCard'
 
-const InfoCardsData = [
+const featureCardData = [
   {
-    title: "Full Website Sprint",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aut consequuntur explicabo omnis, obcaecati quos fugiat ipsum esse cumque quibusdam labore possimus aperiam dignissimos harum quia doloremque neque, quis totam. Sequi.",
-    features: ["$2500 / project", "2-3 Week"],
-    step: "Development",
+    title: 'Branding',
+    subtitle: 'Distinct identities that stand out',
+    description: 'Crafting identities that speak. Memorable brands, lasting impact.',
   },
   {
-    title: "Full Design Package",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut consequuntur explicabo omnis, obcaecati quos fugiat ipsum esse cumque quibusdam labore possimus aperiam dignissimos harum quia doloremque neque, quis totam. Sequi.",
-    features: ["$4500 / Project", "3-4 Week"],
-    step: "Design",
+    title: 'UI/UX Design',
+    subtitle: 'Designs that users love',
+    description: "Designing interfaces users love. Intuitive, clean, and conversion-focused.",
+    cta: 'NEW'
   },
   {
-    title: "Full Stack Development",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut consequuntur explicabo omnis, obcaecati quos fugiat ipsum esse cumque quibusdam labore possimus aperiam dignissimos harum quia doloremque neque, quis totam. Sequi.",
-    features: ["$7500 / Project", "4-6 Week"],
-    step: "Development",
+    title: 'Bug Less Development',
+    subtitle: 'Optimized Code',
+    description: 'Our bug-less development ensures that your website runs smooth and fast.',
+    cta: 'NEW'
   },
-];
+  {
+    title: 'Award-Winning Desings',
+    subtitle: 'Rcognized Design',
+    description: 'Our award-winning designs showcase creativity that set us apart in the industry.',
+    cta: 'NEW'
+  },
+  {
+    title: 'Lightning Fast Delivery',
+    subtitle: 'Quick Turnaround',
+    description: 'Ensuring your deliverables are ready when you need them, with great quality.',
+    cta: 'PRO'
+  },
+  {
+    title: 'Boost Your Revenue',
+    subtitle: 'Increase Profits',
+    description: 'Our mobile-fiendly designs ensures your design looks stunning across all devices.',
+    cta: 'NEW'
+  }
+]
 
 const OurServices = () => {
   return (
-    <section className="relative flex flex-col items-center justify-center pt-[40px] w-full gap-[70px] md:gap-[100px] lg:overflow-visible lg:items-center lg:justify-start bg-[#000000] z-10 -top-[1px]">
-      <div className="relative flex flex-col lg:flex-row-reverse lg:flex-nowrap h-min w-full max-w-[1440px] gap-[70px] md:gap-[84px] px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[120px] lg:overflow-visible lg:items-start lg:justify-center">
-        <div className="flex flex-col flex-nowrap gap-[50px] h-min w-full">
-          <div className="h-min flex grow lg:max-w-[600px] w-full gap-[30px] items-start justify-center flex-col flex-nowrap">
-            <div className="flex justify-start items-start flex-col gap-[30px] w-full h-min">
-              <SectionIndicator text="Our Services" />
-              <div className="w-full h-min flex items-start justify-center flex-col flex-nowrap">
-                <AnimatedText
-                  text="Get High-Quality"
-                  className="text-[32px] -tracking-[2px] leading-[32px] md:text-[52px] md:leading-[50px] font-[400] md:-tracking-[1.9px]"
-                />
-                <AnimatedText
-                  text="Clear Services Remotely."
-                  className="text-[#ffffff99] text-[32px] -tracking-[2px] leading-[32px] md:text-[52px] md:leading-[50px] font-[400] md:-tracking-[1.9px]"
-                />
-              </div>
-            </div>
-            <p className="text-[#ffffff99] text-[16px] leading-[26px] font-[400] -tracking-[0.2px] max-w-[540px]">
-              Discover our range of services designed to elevate your brand and propel your business to next level.
-            </p>
-          </div>
+    <section className="flex flex-col items-center justify-center pt-[70px] gap-[100px] md:pt-[100px] w-full overflow-hidden">
+      <CalloutSection
+        sectionIndicatiorText="Our Services"
+        title="Solutions Designed"
+        subtitle="for Growth"
+        description="We cover the entire digital spectrum to ensure your brand thrives."
+      />
 
-          {/* cards */}
-          <div className="h-min w-full flex flex-col items-center justify-center gap-[24px]">
-            {InfoCardsData.map((card, index) => (
-              <InfoCards key={index} card={card} />
-            ))}
-          </div>
-        </div>
-
-        {/* Image */}
-        <div className="contents">
-          <div className="lg:sticky lg:top-[100px] z-[1] lg:max-w-[528px] w-full self-start">
-            <div className="relative gap-[10px] flex items-center justify-center h-full md:h-[534px] max-w-full w-full p-0 z-2">
-              <div className="relative h-full w-full p-[10px] rounded-[30px] border border-solid backdrop-blur-[2px] border-[#ffffff0d] bg-[#080808] overflow-hidden z-2">
-                <div className="w-full h-full z-2 border-[#ffffff1a] border border-solid rounded-[30px]">
-                  <Image
-                    src={HomePageAboutSection}
-                    alt="About Agency Section Image"
-                    className="w-full h-full object-center object-cover rounded-[30px] z-2"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div className="absolute z-10 w-[31%] h-[1px] left-1/2 -translate-x-1/2 -bottom-0 bg-[linear-gradient(90deg,_rgba(0,85,255,0)_0%,_rgb(0,85,255)_50%,_rgba(0,85,255,0)_100%)]" />
-              <div className="absolute bottom-[8px] left-1/2 -translate-x-1/2 bg-[#0055ff] blur-[40px] rounded-[100%] w-[285px] h-[53px] z-1 pointer-events-none" />
-            </div>
-          </div>
+      <div className="flex h-min w-full max-w-[1440px] mx-auto px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[120px]">
+        <div className="grid gap-[24px] auto-rows-min grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full">
+          {featureCardData.map((card, index) => (
+            <FeatureCard key={index} card={card} />
+          ))}
         </div>
       </div>
 
-      {/* line */}
+      {/* Line */}
       <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.25)_50%,rgba(255,255,255,0.08)_100%)] h-[1px] w-[85%] self-center m-w-[1300px]" />
     </section>
   );

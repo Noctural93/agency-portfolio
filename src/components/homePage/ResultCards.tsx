@@ -24,7 +24,7 @@ const ResultCards = ({
           <Image
             src={img}
             alt="Result Card Background"
-            className="w-full h-full object-cover object-top rounded-[calc(30px)]"
+            className="w-full h-full object-cover object-top rounded-[30px]"
             loading="lazy"
           />
         </div>

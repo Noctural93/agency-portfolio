@@ -17,7 +17,7 @@ interface CalloutSectionProps {
   title: string;
   subtitle: string;
   description: string;
-  btnText: string;
+  btnText?: string;
   showSlider?: boolean;
 }
 
@@ -71,9 +71,11 @@ const CalloutSection = ({
               ))}
             </InfiniteSlider>
           ) : null}
-          <div>
-            <Button>{btnText}</Button>
-          </div>
+          {btnText && (
+            <div>
+              <Button>{btnText}</Button>
+            </div>
+          )}
         </div>
         <div className="absolute -bottom-[67px] md:-bottom-[97px] lg:-bottom-[47px] -right-[125px] md:-right-[185px] xl:-right-[250px] 2xl:-right-[341px]">
           <div className="relative h-[110px] w-[263px] md:h-[170px] md:w-[407px] lg:h-[237px] lg:w-[567px] z-1">
