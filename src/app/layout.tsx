@@ -3,18 +3,11 @@ import { Inter } from "next/font/google";
 import ClientRoot from "@/components/ClientRoot";
 
 import "./globals.css";
+import { defaultSEO } from "./seo/metadata";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Davi",
-  description: "Creative Digital Agency Website",
-  appleWebApp: {
-    title: "Davi",
-    capable: true,
-    statusBarStyle: "black-translucent",
-  },
-};
+export const metadata = defaultSEO;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
