@@ -42,7 +42,14 @@ export default function Preloader() {
     <motion.div
       initial={{ opacity: 1 }}
       animate={controls}
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#000] overflow-hidden"
+      // ✅ Non-blocking overlay for FCP/LCP
+      className="fixed inset-0 z-[9999] flex items-center justify-center bg-[#000] overflow-hidden pointer-events-none"
+      style={{
+        willChange: "transform, opacity",
+        contain: "layout paint",
+        backfaceVisibility: "hidden",
+        transform: "translateZ(0)", // GPU compositing
+      }}
     >
       <div className="relative">
         <motion.h1
