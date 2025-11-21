@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
-import useMediaQuery from "@/utils/useMediaQuery";
+import useMediaQuery from "@/lib/useMediaQuery";
 
 const CustomCursor = () => {
   const [isVisible, setIsVisible] = useState(true);

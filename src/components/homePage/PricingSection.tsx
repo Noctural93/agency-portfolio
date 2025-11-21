@@ -1,6 +1,6 @@
 "use client";
 
-import useMediaQuery from "@/utils/useMediaQuery";
+import useMediaQuery from "@/lib/useMediaQuery";
 import LongRigtBox from "../../../public/LongRigtBox";
 import AnimatedText from "../FramerAnimations/AnimatedText";
 import SectionIndicator from "../SectionIndicator";

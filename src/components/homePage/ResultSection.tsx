@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 
 import { InfiniteSlider } from "../FramerAnimations/InfiniteSlider";
-import useMediaQuery from "@/utils/useMediaQuery";
+import useMediaQuery from "@/lib/useMediaQuery";
 import SlideShow from "../FramerAnimations/SlideShow";
 import CalloutSection from "../CalloutSection";
 import ResultCards from "./ResultCards";

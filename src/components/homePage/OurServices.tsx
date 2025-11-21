@@ -1,41 +1,52 @@
 import CalloutSection from '../CalloutSection'
 import FeatureCard from './FeatureCard'
 
+import colorPallet from "../../../public/paint-palette.png";
+import intelligence from "../../../public/artificial-intelligence.png";
+import webDesign from "../../../public/web-design.png";
+import graph from "../../../public/graph.png";
+
 const featureCardData = [
   {
     title: 'Branding',
     subtitle: 'Distinct identities that stand out',
     description: 'Crafting identities that speak. Memorable brands, lasting impact.',
+    imageData: colorPallet,
   },
   {
     title: 'UI/UX Design',
     subtitle: 'Designs that users love',
     description: "Designing interfaces users love. Intuitive, clean, and conversion-focused.",
-    cta: 'NEW'
+    cta: 'NEW',
+    imageData: webDesign,
   },
   {
     title: 'Bug Less Development',
     subtitle: 'Optimized Code',
     description: 'Our bug-less development ensures that your website runs smooth and fast.',
-    cta: 'NEW'
+    cta: 'NEW',
+    imageData: colorPallet,
   },
   {
     title: 'Award-Winning Desings',
     subtitle: 'Rcognized Design',
     description: 'Our award-winning designs showcase creativity that set us apart in the industry.',
-    cta: 'NEW'
+    cta: 'NEW',
+    imageData: colorPallet,
   },
   {
     title: 'Lightning Fast Delivery',
     subtitle: 'Quick Turnaround',
     description: 'Ensuring your deliverables are ready when you need them, with great quality.',
-    cta: 'PRO'
+    cta: 'PRO',
+    imageData: intelligence,
   },
   {
     title: 'Boost Your Revenue',
     subtitle: 'Increase Profits',
     description: 'Our mobile-fiendly designs ensures your design looks stunning across all devices.',
-    cta: 'NEW'
+    cta: 'NEW',
+    imageData: graph,
   }
 ]
 

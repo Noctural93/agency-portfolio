@@ -12,12 +12,15 @@ import logip from "../../../public/InfiniteSliderIcons/logip.png";
 import log from "../../../public/InfiniteSliderIcons/log.png";
 import myLogo from "../../../public/InfiniteSliderIcons/myLogo.png";
 
+import { ContainerScroll } from "../FramerAnimations/containerScrollAnimation";
+import swacpayImg from '../../../public/projects/swacpay.jpg'
+
 const HeroSection = () => {
   return (
     <section className="relative w-full h-fit overflow-hidden flex flex-col gap-[70px]">
-      <div className="h-[85px]"></div>
+      {/* <div className="h-[85px]"></div> */}
       <div className="w-full max-w-[1440px] flex flex-col gap-[50px] z-10 text-white h-min mx-auto px-8 lg:px-22 xl:px-20 2xl:px-32">
-        <div className="flex flex-col gap-[38px] w-full">
+        {/* <div className="flex flex-col gap-[38px] w-full">
           <div className="flex flex-col gap-[26px] w-full">
             <div className="flex flex-col gap-[34px] w-full">
               <motion.div
@@ -90,7 +93,30 @@ const HeroSection = () => {
               />
             ))}
           </InfiniteSlider>
-        </motion.div>
+        </motion.div> */}
+
+        <ContainerScroll
+          titleComponent={
+            <>
+              <h1 className="text-4xl font-semibold text-black dark:text-white">
+                Unleash the power of <br />
+                <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                  Scroll Animations
+                </span>
+              </h1>
+            </>
+          }
+        >
+          <Image
+            src={swacpayImg}
+            alt="hero"
+            height={720}
+            width={1400}
+            className="mx-auto rounded-2xl object-cover h-full object-left-top"
+            draggable={false}
+          />
+        </ContainerScroll>
+
       </div>
       <div className="absolute top-0 left-0 h-full w-full z-[1] overflow-hidden backdrop-blur-[15px]" />
     </section>

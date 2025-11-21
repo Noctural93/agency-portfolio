@@ -1,9 +1,11 @@
 "use client"
 
 import dollar from "../../../public/dollar.svg";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { useState } from "react";
+import intelligence from "../../../public/artificial-intelligence.png";
+import designGif from "../../../public/design-gif.gif";
 
 interface FeatureCardProps {
   card: {
@@ -12,6 +14,7 @@ interface FeatureCardProps {
     description: string;
     cta?: string;
     pro?: boolean;
+    imageData?: StaticImageData;
   };
 }
 
@@ -25,7 +28,7 @@ const FeatureCard = ({ card }: FeatureCardProps) => {
     >
       <div className="flex flex-col gap-[22px]">
         <div className="flex justify-between items-center">
-          <Image src={dollar} className="h-[32px] w-[32px]" alt="dollar" />
+          <Image src={card.imageData ? card.imageData : intelligence} className="h-[32px] w-[32px]" alt="dollar" />
           <div
             className={`inline-block text-[16px] font-extralight rotate-[135deg] transition-colors duration-700 ease-in-out ${
               isHovered ? "text-white" : "text-[#ffffff3f]"

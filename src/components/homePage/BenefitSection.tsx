@@ -9,7 +9,7 @@ import reqrev from "../../../public/req_rev.jpg";
 import quickturn from "../../../public/quick_turn.png";
 import publishsec from "../../../public/publish_sec.png";
 import freepricing from "../../../public/free_pricing.jpg";
-import useMediaQuery from "@/utils/useMediaQuery";
+import useMediaQuery from "@/lib/useMediaQuery";
 import LongRigtBox from "../../../public/LongRigtBox";
 
 const benefits_1 = [

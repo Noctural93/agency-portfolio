@@ -11,7 +11,7 @@ import launchImage2_1 from "../../../public/infiniteSliderImages/launchcard2_1.j
 import launchImage2_2 from "../../../public/infiniteSliderImages/launchcard2_2.jpeg";
 import launchImage2_3 from "../../../public/infiniteSliderImages/launchcard2_3.jpeg";
 import launchImage2_4 from "../../../public/infiniteSliderImages/launchcard2_4.jpeg";
-import useMediaQuery from "@/utils/useMediaQuery";
+import useMediaQuery from "@/lib/useMediaQuery";
 import SlideShow from "../FramerAnimations/SlideShow";
 
 const firstRow = [
@@ -32,7 +32,7 @@ const LaunchYourSite = () => {
   const isMobile = useMediaQuery("(max-width: 768px)");
 
   return (
-    <section className="flex flex-col items-center justify-center pt-[70px] gap-[70px] md:gap-[100px] md:pt-[100px] w-full overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center pt-[70px] gap-[70px] md:gap-[100px] md:pt-[100px] w-full overflow-hidden bg-black z-10">
       <div className="flex flex-col items-center justify-center w-full gap-[60px]">
         <CalloutSection
           sectionIndicatiorText="Launch Your Site"
