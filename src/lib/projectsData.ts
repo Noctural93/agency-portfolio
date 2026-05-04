@@ -8,7 +8,7 @@ export const projectsData = [
   {
     id: 1,
     slug: "beleltech",
-    platformType: ["Education", "IT"],
+    platformType: ["Education"],
     title: "Belel Tech | Elite IT & Computer Science Education",
     image: beleltechImg,
     description: "Empowering the next generation of tech leaders with elite, industry-driven IT & Computer Science education.",
