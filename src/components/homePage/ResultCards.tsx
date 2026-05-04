@@ -1,4 +1,5 @@
 import Image, { StaticImageData } from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { BsArrowRightCircle } from "react-icons/bs";
 
@@ -8,6 +9,7 @@ interface ResultCardsProps {
   img: StaticImageData;
   description: string;
   keyValues: Array<string>;
+  link: string;
 }
 
 const ResultCards = ({
@@ -16,7 +18,9 @@ const ResultCards = ({
   img,
   description,
   keyValues,
+  link
 }: ResultCardsProps) => {
+  const router = useRouter();
   return (
     <div className="h-full w-full md:w-[640px] flex flex-col justify-center items-center rounded-[30px] border-[2px] border-solid backdrop-blur-[2px] bg-[#080808] border-[#ffffff2a] p-[10px] overflow-hidden">
       <div className="h-full w-full gap-[16px]">
@@ -56,7 +60,7 @@ const ResultCards = ({
                 ))}
               </div>
 
-              <div className="flex items-center gap-[2px]">
+              <div className="flex items-center gap-[2px] cursor-pointer" onClick={() => router.push(link)}>
                 <p>Read case study</p>
                 <BsArrowRightCircle/>
               </div>

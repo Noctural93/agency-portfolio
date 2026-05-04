@@ -18,7 +18,6 @@ const BGVideo = ({ childrenClass }: BGVideoProps) => {
         muted
         playsInline
         preload="none"
-        poster="/hero_fallback.jpg"
         className="absolute inset-0 w-full h-full object-cover z-[-1]"
       >
         <source src="/hero_bg_video.webm" type="video/webm" />

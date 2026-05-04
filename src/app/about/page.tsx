@@ -5,7 +5,7 @@ const BGVideo = dynamic(() => import("@/components/homePage/BGVideo"), {
   ssr: true,
 });
 
-const AboutHeroSection = dynamic(() => import("@/components/aboutPage/AboutHeroSection"), {
+const HeroSection = dynamic(() => import("@/components/HeroSection"), {
   ssr: true,
   loading: () => <div className="h-[100vh] w-full" />
 });
@@ -39,7 +39,14 @@ const About = () => {
   return (
     <>
       <BGVideo childrenClass='h-[624px] md:h-[724px]'/>
-      <AboutHeroSection/>
+      <HeroSection
+        topCardHeading="2025"
+        topCardSubHeading="Dig Deep About Us"
+        heading_1="Learn More About Davi"
+        heading_2="Let's Deep Dive!"
+        description="Davi is your go-to agency for creative thinking and marketing ideas. We specialize in digital business solutions."
+        btnText="What is Davi?"
+      />
       <ImageTextSection
         imageString={HomePageAboutSection}
         indicatorText="About Agency"

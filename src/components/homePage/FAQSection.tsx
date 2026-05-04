@@ -36,7 +36,7 @@ const FAQData = [
 const FAQSection = () => {
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   return (
-    <section className="relative flex flex-col items-center justify-center pt-[40px] w-full gap-[70px] md:gap-[100px] lg:overflow-visible lg:items-center lg:justify-start bg-[#000000] z-10 -top-[1px]">
+    <section className="relative flex flex-col items-center justify-center pt-[40px] w-full gap-[70px] md:gap-[100px] lg:overflow-visible lg:items-center lg:justify-start bg-[#000000] z-10 -top-[1px] pb-[120px]">
       <div className="relative flex flex-col lg:flex-row lg:flex-nowrap h-min w-full max-w-[1440px] gap-[70px] md:gap-[84px] px-[30px] lg:px-[50px] xl:px-[70px] 2xl:px-[120px] lg:overflow-visible lg:items-start lg:justify-center">
         <div className="flex flex-col lg:flex-row gap-[60px] items-start justify-center w-full">
           <div className="flex flex-col gap-[30px] items-start justify-center w-full">

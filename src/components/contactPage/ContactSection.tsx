@@ -1,12 +1,25 @@
 import React from "react";
 import Bottomvector from "../../../public/Bottomvector";
-import HeroSection from "./HeroSection";
+import dynamic from "next/dynamic";
+
 import ContactFormSection from "./ContactFormSection";
+
+const HeroSection = dynamic(() => import("@/components/HeroSection"), {
+  ssr: true,
+  loading: () => <div className="h-[100vh] w-full" />
+});
 
 const ContactSection = () => {
   return (
     <section className="relative flex flex-col items-center justify-center gap-[70px] w-full">
-      <HeroSection />
+      <HeroSection 
+        topCardHeading="24/7"
+        topCardSubHeading="Let's Work Together"
+        heading_1="Any Questions Rising?"
+        heading_2="We are All Here."
+        description="Whether you have a question, need assistance, or want to start a new project, our team is here to help."
+        btnText="Fill The Form Out!"
+      />
 
       <ContactFormSection/>
 

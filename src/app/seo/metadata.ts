@@ -52,7 +52,6 @@ export const defaultSEO: Metadata = {
     shortcut: ["/favicon.ico"],
     apple: ["/apple-icon.png"],
   },
-  themeColor: "#0B0D17",
   appleWebApp: {
     capable: true,
     title: "Davi",

@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="relative w-full h-min flex items-center justify-center pt-[120px]"
+      className="relative w-full h-min flex items-center justify-center"
     >
       <div className="relative flex flex-col items-center gap-[90px] pt-[100px] pb-[24px] h-min w-full border-t border-solid border-[#ffffff1a]">
         <div className="absolute top-0 left-0 h-full w-full z-1">

@@ -62,7 +62,7 @@ const Header = () => {
           isOpen && bgExpanded
         )}
       >
-        <div className="px-0 pt-0 md:pt-5 md:px-22 xl:px-20 2xl:px-32 h-[85px] w-full max-w-[1200px] flex justify-center">
+        <div className="px-0 pt-0 md:pt-5 md:px-18 xl:px-20 2xl:px-26 h-[85px] w-full max-w-[1400px] flex justify-center">
           <motion.div
             animate={{
               width: minHeader ? "100%" : isMobile ? "100%" : "474px",

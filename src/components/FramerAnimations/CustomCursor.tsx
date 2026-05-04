@@ -6,6 +6,7 @@ import useMediaQuery from "@/lib/useMediaQuery";
 
 const CustomCursor = () => {
   const [isVisible, setIsVisible] = useState(true);
+  const [isNativeZone, setIsNativeZone] = useState(false);
 
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
@@ -29,16 +30,27 @@ const CustomCursor = () => {
     window.addEventListener("mouseenter", handleMouseEnter);
     window.addEventListener("mouseleave", handleMouseLeave);
 
+    const nativeZones = document.querySelectorAll(".native-cursor-zone");
+
+    nativeZones.forEach((zone) => {
+      zone.addEventListener("mouseenter", () => setIsNativeZone(true));
+      zone.addEventListener("mouseleave", () => setIsNativeZone(false));
+    });
+
     return () => {
       window.removeEventListener("mousemove", moveCursor);
       window.removeEventListener("mouseenter", handleMouseEnter);
       window.removeEventListener("mouseleave", handleMouseLeave);
+
+      nativeZones.forEach((zone) => {
+        zone.removeEventListener("mouseenter", () => setIsNativeZone(true));
+        zone.removeEventListener("mouseleave", () => setIsNativeZone(false));
+      });
     };
   }, [mouseX, mouseY]);
 
-  if(isMobile){
-    return null;
-  }
+  if(isMobile) return null;
+  if(isNativeZone) return null;
 
   return (
     <motion.div

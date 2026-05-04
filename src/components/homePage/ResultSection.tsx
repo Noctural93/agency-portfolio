@@ -19,6 +19,7 @@ const ResultCardsData = [
     description:
       "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
     keyValues: ["web"],
+    link: '/portfolio/swacpay'
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ const ResultCardsData = [
     description:
       "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
     keyValues: ["web"],
+    link: '/portfolio/swacpay'
   },
   {
     id: 3,
@@ -37,6 +39,7 @@ const ResultCardsData = [
     description:
       "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
     keyValues: ["web"],
+    link: '/portfolio/swacpay'
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ const ResultCardsData = [
     description:
       "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
     keyValues: ["web"],
+    link: '/portfolio/swacpay'
   }
 ];
 
@@ -86,6 +90,7 @@ const ResultSection = () => {
                 title={item.title}
                 description={item.description}
                 keyValues={item.keyValues}
+                link={item.link}
               />
             ))}
           </InfiniteSlider>
@@ -99,6 +104,7 @@ const ResultSection = () => {
                 title={item.title}
                 description={item.description}
                 keyValues={item.keyValues}
+                link={item.link}
               />
             ))}
           </SlideShow>

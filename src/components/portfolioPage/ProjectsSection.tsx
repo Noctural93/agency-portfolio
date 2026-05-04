@@ -3,14 +3,21 @@
 import useMediaQuery from "@/lib/useMediaQuery";
 import Bottomvector from "../../../public/Bottomvector";
 import StackedCards from "../FramerAnimations/StackedCards";
-import HeroSection from "./HeroSection";
+import HeroSection from "../HeroSection";
 import ProjectCards from "./ProjectCards";
 
 const ProjectsSection = () => {
     const isLargeScreen = useMediaQuery('(min-width: 1200px)');
   return (
     <section className="relative flex flex-col items-center justify-center gap-[70px] w-full">
-      <HeroSection />
+      <HeroSection
+        topCardHeading="2025"
+        topCardSubHeading="Explore Our Portfolio"
+        heading_1="Check Out Some"
+        heading_2="Extra-Ordinary Work."
+        description="From startups to established brands, we create tailored solutions that drive success and make a real impact."
+        btnText="Build Your Product"
+      />
       
       {!isLargeScreen 
         ? <StackedCards /> 
