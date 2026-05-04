@@ -5,6 +5,9 @@ import colorPallet from "../../../public/paint-palette.png";
 import intelligence from "../../../public/artificial-intelligence.png";
 import webDesign from "../../../public/web-design.png";
 import graph from "../../../public/graph.png";
+import developer from "../../../public/developer.png";
+import approval from "../../../public/approval.png";
+import rocket from "../../../public/rocket-25.png";
 
 const featureCardData = [
   {
@@ -25,26 +28,26 @@ const featureCardData = [
     subtitle: 'Optimized Code',
     description: 'Our bug-less development ensures that your website runs smooth and fast.',
     cta: 'NEW',
-    imageData: colorPallet,
+    imageData: developer,
   },
   {
-    title: 'Award-Winning Desings',
-    subtitle: 'Rcognized Design',
+    title: 'Award-Winning Designs',
+    subtitle: 'Recognized Design',
     description: 'Our award-winning designs showcase creativity that set us apart in the industry.',
     cta: 'NEW',
-    imageData: colorPallet,
+    imageData: approval,
   },
   {
     title: 'Lightning Fast Delivery',
     subtitle: 'Quick Turnaround',
     description: 'Ensuring your deliverables are ready when you need them, with great quality.',
     cta: 'PRO',
-    imageData: intelligence,
+    imageData: rocket,
   },
   {
     title: 'Boost Your Revenue',
     subtitle: 'Increase Profits',
-    description: 'Our mobile-fiendly designs ensures your design looks stunning across all devices.',
+    description: 'Our mobile-friendly designs ensures your website looks stunning across all devices.',
     cta: 'NEW',
     imageData: graph,
   }

@@ -8,50 +8,7 @@ import SlideShow from "../FramerAnimations/SlideShow";
 import CalloutSection from "../CalloutSection";
 import ResultCards from "./ResultCards";
 import Bottomvector from "../../../public/Bottomvector";
-import swacpayImg from '../../../public/projects/swacpay.jpg'
-
-const ResultCardsData = [
-  {
-    id: 1,
-    platformType: ["🪙 FinTech"],
-    title: "Swacpay The Next Generation Payment Method",
-    image: swacpayImg,
-    description:
-      "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
-    keyValues: ["web"],
-    link: '/portfolio/swacpay'
-  },
-  {
-    id: 2,
-    platformType: ["🪙 FinTech"],
-    title: "Swacpay The Next Generation Payment Method",
-    image: swacpayImg,
-    description:
-      "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
-    keyValues: ["web"],
-    link: '/portfolio/swacpay'
-  },
-  {
-    id: 3,
-    platformType: ["🪙 FinTech"],
-    title: "Swacpay The Next Generation Payment Method",
-    image: swacpayImg,
-    description:
-      "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
-    keyValues: ["web"],
-    link: '/portfolio/swacpay'
-  },
-  {
-    id: 4,
-    platformType: ["🪙 FinTech"],
-    title: "Swacpay The Next Generation Payment Method",
-    image: swacpayImg,
-    description:
-      "Little byline about the casestudy with main keywords and a little writeup about the project which should only ideally lenght 2 lines",
-    keyValues: ["web"],
-    link: '/portfolio/swacpay'
-  }
-];
+import { projectsData } from "@/lib/projectsData";
 
 const MemoResultCard = React.memo(ResultCards);
 
@@ -82,7 +39,7 @@ const ResultSection = () => {
             itemGap="mx-3"
             containerClassName="p-[10px]"
           >
-            {ResultCardsData.map((item) => (
+            {projectsData.map((item) => (
               <MemoResultCard
                 key={item.id}
                 platformType={item.platformType}
@@ -96,7 +53,7 @@ const ResultSection = () => {
           </InfiniteSlider>
         ) : (
           <SlideShow>
-            {ResultCardsData.map((item) => (
+            {projectsData.map((item) => (
               <MemoResultCard
                 key={item.id}
                 platformType={item.platformType}

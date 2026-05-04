@@ -35,7 +35,7 @@ export default function SplineModel() {
         <div className="h-full w-full">
           <Spline
             scene="https://prod.spline.design/NT0jpktJaPOVyFIW/scene.splinecode"
-            onLoad={(app) => {
+            onLoad={(app: any) => {
               setLoaded(true);
               appRef.current = app;
             }}

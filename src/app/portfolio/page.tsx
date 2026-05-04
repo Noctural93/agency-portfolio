@@ -1,22 +1,6 @@
-import dynamic from "next/dynamic";
-
-const ProjectsSection = dynamic(
-  () => import("@/components/portfolioPage/ProjectsSection"),
-  {
-    ssr: true,
-    loading: () => <div className="h-[100vh] w-full" />,
-  }
-);
-
-const FAQSection = dynamic(() => import('@/components/homePage/FAQSection'), {
-  ssr: true,
-  loading: () => <div className="h-[100vh] w-full" />
-});
-
-const BGVideo = dynamic
-(() => import("@/components/homePage/BGVideo"), {
-  ssr: true,
-});
+import ProjectsSection from "@/components/portfolioPage/ProjectsSection";
+import FAQSection from "@/components/homePage/FAQSection";
+import BGVideo from "@/components/homePage/BGVideo";
 
 const Portfolio = () => {
   return (

@@ -1,15 +1,6 @@
 import ContactSection from '@/components/contactPage/ContactSection';
-import dynamic from 'next/dynamic';
-
-const FAQSection = dynamic(() => import('@/components/homePage/FAQSection'), {
-  ssr: true,
-  loading: () => <div className="h-[100vh] w-full" />
-});
-
-const BGVideo = dynamic
-(() => import("@/components/homePage/BGVideo"), {
-  ssr: true,
-});
+import FAQSection from '@/components/homePage/FAQSection';
+import BGVideo from '@/components/homePage/BGVideo';
 
 const Contact = () => {
   return (

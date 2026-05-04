@@ -1,6 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion";
+import Image, { StaticImageData } from "next/image";
 
 import AnimatedText from "../FramerAnimations/AnimatedText";
 import TopCard from "../TopCard";
@@ -11,9 +12,14 @@ interface HeroSectionProps {
     title?: string;
     desc?: string;
     projectType?: Array<string>;
+    services?: string;
+    client?: string;
+    category?: string;
+    image?: StaticImageData;
+    externalLink?: string;
 }
 
-const HeroSection = ({ date, title, desc, projectType }: HeroSectionProps) => {
+const HeroSection = ({ date, title, desc, projectType, services, client, category, image, externalLink }: HeroSectionProps) => {
   return (
     <section className="relative w-full h-fit overflow-hidden flex flex-col gap-[70px]">
       <div className="h-[85px]"></div>
@@ -26,7 +32,7 @@ const HeroSection = ({ date, title, desc, projectType }: HeroSectionProps) => {
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.5, delay: 0.2 }}
               >
-                <TopCard heading="DATE" subHeading={date}/>
+                <TopCard heading="DATE" subHeading={date || "2024"}/>
               </motion.div>
               <div className="text-[56px] leading-[55px] text-white md:text-[78px] font-normal md:leading-[90px] w-full tracking-[-3.8px]">
                 <motion.h1
@@ -37,14 +43,6 @@ const HeroSection = ({ date, title, desc, projectType }: HeroSectionProps) => {
                 >
                   {title}
                 </motion.h1>
-                {/* <motion.h1
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                  className="w-full"
-                >
-                  {title}
-                </motion.h1> */}
               </div>
             </div>
             <AnimatedText
@@ -68,14 +66,58 @@ const HeroSection = ({ date, title, desc, projectType }: HeroSectionProps) => {
           </motion.div>
         </div>
 
-        <div className="border-[2px] border-solid border-[#ffffff12] rounded-[20px] bg-gradient-to-t from-blue-600/15 to-neutral-600/10 w-full xl:max-w-[486px] p-[40px]">
-                  <div>
-                    <p>Services</p>
-                    <h1>Web design</h1>
-                  </div>
-                  <div/>
-        </div>
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="border-[2px] border-solid border-[#ffffff12] rounded-[20px] bg-[#0d0d0d]/80 backdrop-blur-md w-full xl:max-w-[486px] p-[40px] flex flex-col gap-6"
+        >
+          <div className="flex flex-col gap-1 border-b border-[#ffffff12] pb-4">
+            <p className="text-[#ffffff99] text-sm tracking-wider uppercase">Services</p>
+            <h2 className="text-xl font-medium">{services || "Web Design"}</h2>
+          </div>
+          <div className="flex flex-col gap-1 border-b border-[#ffffff12] pb-4">
+            <p className="text-[#ffffff99] text-sm tracking-wider uppercase">Client</p>
+            <h2 className="text-xl font-medium">{client || "Confidential"}</h2>
+          </div>
+          <div className="flex flex-col gap-1 border-b border-[#ffffff12] pb-4">
+            <p className="text-[#ffffff99] text-sm tracking-wider uppercase">Category</p>
+            <h2 className="text-xl font-medium">{category || "Project"}</h2>
+          </div>
+          <div className="flex flex-col gap-1 border-b border-[#ffffff12] pb-4">
+            <p className="text-[#ffffff99] text-sm tracking-wider uppercase">Timeline</p>
+            <h2 className="text-xl font-medium">{date || "1 Month"}</h2>
+          </div>
+          {externalLink && (
+            <a 
+              href={externalLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="mt-2 w-full py-[14px] bg-[#0055ff] hover:bg-[#0044cc] text-white text-center font-medium rounded-xl transition-colors"
+            >
+              Visit Live Website
+            </a>
+          )}
+        </motion.div>
       </div>
+
+      {image && (
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 1 }}
+          className="w-full max-w-[1440px] mx-auto px-8 lg:px-22 xl:px-20 2xl:px-32 z-10"
+        >
+          <div className="w-full h-[300px] md:h-[500px] lg:h-[700px] rounded-[30px] border border-solid border-[#ffffff12] overflow-hidden relative">
+            <Image 
+              src={image} 
+              alt={title || "Project Image"} 
+              fill 
+              className="object-cover object-top" 
+            />
+          </div>
+        </motion.div>
+      )}
 
       {/* blur */}
       <div className="absolute top-0 left-0 h-full w-full z-1 overflow-hidden backdrop-blur-[15px]" />
