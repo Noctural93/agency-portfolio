@@ -5,16 +5,26 @@ import { useInView } from "framer-motion";
 
 export default function SplineModel() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const isInView = useInView(containerRef, { margin: "-20% 0px -20% 0px" });
+  const isInView = useInView(containerRef, { margin: "-10% 0px -10% 0px" });
+  const isNearView = useInView(containerRef, { margin: "400px 0px 400px 0px" });
 
+  const [hasEnteredView, setHasEnteredView] = useState(false);
   const [Spline, setSpline] = useState<any>(null);
   const [loaded, setLoaded] = useState(false);
   const appRef = useRef<any>(null);
 
-  // ✅ Lazy load only once
   useEffect(() => {
-    import("@splinetool/react-spline").then((mod) => setSpline(() => mod.default));
-  }, []);
+    if (isNearView && !hasEnteredView) {
+      setHasEnteredView(true);
+    }
+  }, [isNearView, hasEnteredView]);
+
+  // ✅ Lazy load only once when near viewport
+  useEffect(() => {
+    if (hasEnteredView) {
+      import("@splinetool/react-spline").then((mod) => setSpline(() => mod.default));
+    }
+  }, [hasEnteredView]);
 
   // ✅ Pause/Resume Spline rendering based on visibility
   useEffect(() => {
@@ -24,7 +34,7 @@ export default function SplineModel() {
     } else {
       appRef.current.stop(); // pause when offscreen
     }
-  }, [isInView]);
+  }, [isInView, loaded]);
 
   return (
     <div

@@ -17,3 +17,30 @@ body {
     transform: translate(20px, 20px);
   }
 }
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate-marquee-left {
+  animation: marqueeLeft linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marqueeRight linear infinite;
+}
+

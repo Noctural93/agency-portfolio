@@ -10,7 +10,15 @@ export default function Preloader() {
   const [waveActive, setWaveActive] = useState(true);
 
   useEffect(() => {
-    const duration = 4000;
+    if (typeof window !== "undefined") {
+      const hasLoaded = sessionStorage.getItem("app-loaded");
+      if (hasLoaded) {
+        setIsDone(true);
+        return;
+      }
+    }
+
+    const duration = 1200;
     const start = performance.now();
 
     const updateProgress = () => {
@@ -25,9 +33,12 @@ export default function Preloader() {
         controls.start({
           scale: 8,
           opacity: 0,
-          transition: { duration: 1.8, ease: "easeInOut" },
+          transition: { duration: 0.6, ease: "easeInOut" },
         });
-        setTimeout(() => setIsDone(true), 1800);
+        if (typeof window !== "undefined") {
+          sessionStorage.setItem("app-loaded", "true");
+        }
+        setTimeout(() => setIsDone(true), 600);
       }
     };
 

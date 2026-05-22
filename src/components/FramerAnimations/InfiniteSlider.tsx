@@ -1,6 +1,5 @@
-"use client"
+"use client";
 
-import { motion, TargetAndTransition } from "framer-motion";
 import {
   Children,
   Fragment,
@@ -20,20 +19,24 @@ type Props = {
   direction?: "left" | "right";
 };
 
-const InfiniteSlider = ({ children, duration, containerClassName, itemGap, direction = "left" }: Props) => {
+const InfiniteSlider = ({
+  children,
+  duration = 10,
+  containerClassName,
+  itemGap = "mx-3",
+  direction = "left",
+}: Props) => {
   const [isMounted, setIsMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const sliderRef = useRef<HTMLDivElement>(null);
   const [multiplier, setMultiplier] = useState(1);
 
   const calculateWidth = useCallback(() => {
-    const containerRect = containerRef.current?.getBoundingClientRect();
-    const sliderRect = sliderRef.current?.getBoundingClientRect();
-    const containerWidth = containerRect?.width;
-    const sliderWidth = sliderRect?.width;
+    const containerWidth = containerRef.current?.getBoundingClientRect().width;
+    const sliderWidth = sliderRef.current?.getBoundingClientRect().width;
 
-    if (containerWidth && sliderWidth) {
-      setMultiplier(sliderWidth < containerWidth ? Math.ceil(containerWidth / sliderWidth) : 1);
+    if (containerWidth && sliderWidth && sliderWidth > 0) {
+      setMultiplier(Math.ceil(containerWidth / sliderWidth));
     }
   }, []);
 
@@ -58,11 +61,11 @@ const InfiniteSlider = ({ children, duration, containerClassName, itemGap, direc
 
   const multiplyChildren = useCallback(
     (multiplier: number) => {
-      const arraySize = multiplier >= 0 ? multiplier : 0;
+      const arraySize = isFinite(multiplier) && multiplier >= 0 ? Math.floor(multiplier) : 0;
       return [...Array(arraySize)].map((_, i) => (
         <Fragment key={i}>
           {Children.map(children, (child) => (
-            <div className={`${itemGap} h-full`}>{child}</div>
+            <div className={twMerge("flex-shrink-0 h-full flex items-center", itemGap)}>{child}</div>
           ))}
         </Fragment>
       ));
@@ -70,42 +73,46 @@ const InfiniteSlider = ({ children, duration, containerClassName, itemGap, direc
     [children, itemGap]
   );
 
-  const scroll: TargetAndTransition = {
-    x: direction == "left" ? ["0%", "-100%"] : ["-100%", "0%"],
-    transition: {
-      duration: duration || 10,
-      ease: "linear",
-      repeat: Infinity,
-    },
-  };
-
   if (!isMounted) return null;
 
   return (
     <div
       ref={containerRef}
-      className={twMerge("overflow-x-hidden flex flex-row relative w-full h-full [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,black_30%,black_70%,rgba(0,0,0,0)_100%)]", containerClassName)}
+      className={twMerge(
+        "overflow-x-hidden flex flex-row relative w-full h-full [mask-image:linear-gradient(to_right,rgba(0,0,0,0)_0%,black_30%,black_70%,rgba(0,0,0,0)_100%)]",
+        containerClassName
+      )}
     >
-      <motion.div
-        animate={scroll}
-        className="flex-shrink-0 flex-grow-0 basis-auto min-w-full h-full flex flex-row items-center"
+      <div
+        className={twMerge(
+          "flex-shrink-0 flex-grow-0 basis-auto min-w-full h-full flex flex-row items-center hover:[animation-play-state:paused]",
+          direction === "left" ? "animate-marquee-left" : "animate-marquee-right"
+        )}
+        style={{
+          animationDuration: `${duration}s`,
+        }}
       >
         <div
           ref={sliderRef}
           className="flex-shrink-0 flex-grow-0 basis-auto flex h-full min-w-fit flex-row items-center"
         >
           {Children.map(children, (child) => (
-            <div className={`${itemGap} h-full`}>{child}</div>
+            <div className={twMerge("flex-shrink-0 h-full flex items-center", itemGap)}>{child}</div>
           ))}
         </div>
         {multiplyChildren(multiplier - 1)}
-      </motion.div>
-      <motion.div
-        animate={scroll}
-        className="flex-shrink-0 flex-grow-0 basis-auto min-w-full h-full flex flex-row items-center"
+      </div>
+      <div
+        className={twMerge(
+          "flex-shrink-0 flex-grow-0 basis-auto min-w-full h-full flex flex-row items-center hover:[animation-play-state:paused]",
+          direction === "left" ? "animate-marquee-left" : "animate-marquee-right"
+        )}
+        style={{
+          animationDuration: `${duration}s`,
+        }}
       >
         {multiplyChildren(multiplier)}
-      </motion.div>
+      </div>
     </div>
   );
 };

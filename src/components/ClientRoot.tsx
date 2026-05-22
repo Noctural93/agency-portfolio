@@ -11,11 +11,13 @@ const CustomCursor = dynamic(() => import("@/components/FramerAnimations/CustomC
 });
 const ReactLenis = dynamic(() => import("lenis/react"), { ssr: false });
 const BlurBottom = dynamic(() => import("@/components/BlurBottom"), { ssr: false });
+const ScrollToTop = dynamic(() => import("@/components/ScrollToTop"), { ssr: false });
 
 export default function ClientRoot({ children }: { children: React.ReactNode }) {
   return (
     <ReactLenis root options={{ lerp: 0.06 }}>
       <div className="relative z-1">
+        <ScrollToTop />
         <Preloader />
         <Header />
         <CustomCursor />

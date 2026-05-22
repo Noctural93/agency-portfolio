@@ -94,7 +94,7 @@ const TestimonialCards = () => {
                 <p className="text-[14px] text-[#ffffff80]">{card.subtitle}</p>
               </div>
             </div>
-            <div className="absolute bg-[linear-gradient(90deg,_rgba(0,85,255,0)_0%,_rgb(0,85,255)_50%,_rgba(0,85,255,0)_100%)] top-0 left-1/2 -translate-1/2 h-[1px] w-[62%]" />
+            <div className="absolute bg-[linear-gradient(90deg,_rgba(0,85,255,0)_0%,_rgb(0,85,255)_50%,_rgba(0,85,255,0)_100%)] top-0 left-1/2 -translate-x-1/2 h-[1px] w-[62%]" />
           </div>
         ))}
       </div>

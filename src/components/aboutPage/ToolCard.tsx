@@ -47,7 +47,7 @@ const FeatureCard = ({ card }: FeatureCardProps) => {
         <div className="bg-[linear-gradient(90deg,rgba(255,255,255,0.08)_0%,rgba(255,255,255,0.25)_50%,rgba(255,255,255,0.08)_100%)] h-[1px] w-[60%]" />
         <p className="text-[16px] text-[#ffffff80]">{card.description}</p>
       </div>
-      <div className="absolute bg-[linear-gradient(90deg,_rgba(0,85,255,0)_0%,_rgb(0,85,255)_50%,_rgba(0,85,255,0)_100%)] top-0 left-1/2 -translate-1/2 h-[1px] w-[62%]" />
+      <div className="absolute bg-[linear-gradient(90deg,_rgba(0,85,255,0)_0%,_rgb(0,85,255)_50%,_rgba(0,85,255,0)_100%)] top-0 left-1/2 -translate-x-1/2 h-[1px] w-[62%]" />
     </div>
   );
 };

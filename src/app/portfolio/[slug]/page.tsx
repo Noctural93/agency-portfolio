@@ -24,6 +24,11 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
     notFound();
   }
 
+  const currentIndex = projectsData.findIndex((p) => p.slug === params.slug);
+  const nextProject1 = projectsData[(currentIndex + 1) % projectsData.length];
+  const nextProject2 = projectsData[(currentIndex + 2) % projectsData.length];
+  const otherProjects = [nextProject1, nextProject2];
+
   return (
     <>
       <BGVideo />
@@ -63,19 +68,19 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
           <div className="h-[300px] md:h-[400px] w-full rounded-[30px] border border-solid border-[#ffffff12] bg-[#111] overflow-hidden relative group">
             <Image 
-              src={project.image} 
+              src={project.leftImage || project.image} 
               alt={`${project.title} detail 1`}
               fill
-              className="object-cover object-left group-hover:scale-105 transition-transform duration-700"
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-black/20 mix-blend-overlay"></div>
           </div>
           <div className="h-[300px] md:h-[400px] w-full rounded-[30px] border border-solid border-[#ffffff12] bg-[#1a1a1a] overflow-hidden relative group">
             <Image 
-              src={project.image} 
+              src={project.rightImage || project.image} 
               alt={`${project.title} detail 2`}
               fill
-              className="object-cover object-right group-hover:scale-105 transition-transform duration-700"
+              className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-black/20 mix-blend-overlay"></div>
           </div>
@@ -99,10 +104,10 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
         {/* Large Secondary Image */}
         <div className="w-full h-[400px] md:h-[600px] rounded-[30px] border border-solid border-[#ffffff12] bg-[#151515] overflow-hidden relative group">
           <Image 
-            src={project.image} 
+            src={project.downImage || project.image} 
             alt={`${project.title} overview`}
             fill
-            className="object-cover object-bottom group-hover:scale-[1.02] transition-transform duration-700"
+            className="object-cover object-center group-hover:scale-[1.02] transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-black/10 mix-blend-overlay"></div>
         </div>
@@ -133,7 +138,7 @@ const ProjectPage = ({ params }: ProjectPageProps) => {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full mt-4">
-          {projectsData.filter(p => p.slug !== project.slug).slice(0, 2).map((otherProject) => (
+          {otherProjects.map((otherProject) => (
             <Link href={`/portfolio/${otherProject.slug}`} key={otherProject.id} className="w-full group">
               <div className="h-[300px] md:h-[400px] w-full rounded-[30px] border border-solid border-[#ffffff12] overflow-hidden relative bg-[#080808]">
                 <Image

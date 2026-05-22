@@ -16,11 +16,11 @@ const TeamMemberCard = ({ card }: TeamMemberProps) => {
   const [isHovered, setIsHovered] = useState<boolean>(false);
   return (
     <div
-      className="relative w-full h-min p-[10px] gap-[22px] border-[2px] border-solid border-[#ffffff12] rounded-[20px] bg-gradient-to-t from-blue-600/15 to-neutral-600/10 hover: cursor-pointer z-0"
+      className="relative w-full aspect-[3/4] p-[10px] border-[2px] border-solid border-[#ffffff12] rounded-[20px] bg-gradient-to-t from-blue-600/15 to-neutral-600/10 hover: cursor-pointer z-0"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      <div className="relative flex rounded-[20px]">
+      <div className="relative w-full h-full rounded-[20px] overflow-hidden">
         <Image
           src="/teamMember.avif"
           alt={card.name}
@@ -43,7 +43,7 @@ const TeamMemberCard = ({ card }: TeamMemberProps) => {
           </div>
         </div>
       </div>
-      <div className="absolute bg-[linear-gradient(90deg,_rgba(0,85,255,0)_0%,_rgb(0,85,255)_50%,_rgba(0,85,255,0)_100%)] top-0 left-1/2 -translate-1/2 h-[1px] w-[62%]" />
+      <div className="absolute bg-[linear-gradient(90deg,_rgba(0,85,255,0)_0%,_rgb(0,85,255)_50%,_rgba(0,85,255,0)_100%)] top-0 left-1/2 -translate-x-1/2 h-[1px] w-[62%]" />
     </div>
   );
 };
