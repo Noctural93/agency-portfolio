@@ -39,12 +39,12 @@ export default function SplineModel() {
   return (
     <div
       ref={containerRef}
-      className="absolute top-[2%] left-[8%] h-full w-full z-[10] overflow-hidden"
+      className="absolute top-[2%] left-[8%] h-full w-full z-[20] overflow-hidden"
     >
       {Spline && (
         <div className="h-full w-full">
           <Spline
-            scene="https://prod.spline.design/NT0jpktJaPOVyFIW/scene.splinecode"
+            scene="https://prod.spline.design/b2DR47EqPj0hxAaD/scene.splinecode"
             onLoad={(app: any) => {
               setLoaded(true);
               appRef.current = app;
